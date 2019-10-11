@@ -1,0 +1,78 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Clipping.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ClippingPolygon.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ModelGL.h
+vector
+-
+string
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.h
+vector
+-
+list
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Util.h
+vector
+-
+string
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/main.cpp
+windows.h
+-
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+Clipping.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Clipping.h
+ClippingPolygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ClippingPolygon.h
+GL/gl.h
+-
+GL/glut.h
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+vector
+-
+fstream
+-
+iostream
+-
+string
+-
+ModelGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ModelGL.h
+Util.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Util.h
+
