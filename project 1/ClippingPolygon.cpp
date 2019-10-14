@@ -173,6 +173,9 @@ pOUT = out;
 }
 
 vector<Polygon::Point> ClippingPolygon::clipper(vector<Polygon::Point> pIn, Polygon::Point wMin, Polygon::Point wMax, Boundary b){
+    if (pIn.size() == 0) {
+        return pIn;
+    }
     Polygon::Point start, end;
     vector<Polygon::Point> out;
     for (int i = 0; i < pIn.size(); i++) {

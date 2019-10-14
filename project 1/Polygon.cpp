@@ -71,6 +71,13 @@ void Polygon::lineDDA(int x0, int y0, int xEnd, int yEnd) {
  * @param yEnd end point
  */
 void Polygon::lineBres(int x0, int y0, int xEnd, int yEnd) {
+    int flag_of_k;
+    if ((xEnd - x0) * (yEnd - y0) >= 0) {
+        flag_of_k = 1;
+    }
+    else {
+        flag_of_k = 0;
+    }
     int dx = fabs(xEnd - x0), dy = fabs(yEnd - y0);
     int x, y, p;
     float k;
@@ -97,7 +104,12 @@ void Polygon::lineBres(int x0, int y0, int xEnd, int yEnd) {
             if (p < 0) {
                 p += 2 * dy;
             } else {
-                y++;
+                if (flag_of_k) {
+                    y++;
+                }
+                else {
+                    y --;
+                }
                 p += 2 * dy - 2 * dx;
             }
             draw_pixel(x, y);
@@ -122,7 +134,12 @@ void Polygon::lineBres(int x0, int y0, int xEnd, int yEnd) {
             if (p < 0) {
                 p += 2 * dx;
             } else {
-                x++;
+                if (k > 0) {
+                    x++;
+                }
+                else {
+                    x --;
+                }
                 p += 2 * dx - 2 * dy;
             }
             draw_pixel(x, y);
@@ -132,6 +149,9 @@ void Polygon::lineBres(int x0, int y0, int xEnd, int yEnd) {
 }
 
 void Polygon::buildPoly() {
+    if (poly_edges.size() != 0) {
+        poly_edges.clear();
+    }
     point_num = poly_points.size();
     Poly_edge current_poly_edge;
     Edge current_edge;
@@ -167,14 +187,14 @@ void Polygon::buildPoly() {
 }
 
 void Polygon::getMinMaxY() {
-    minY = poly_points[0].y;
+    minY = floor(poly_points[0].y);
     maxY = minY;
     for (int i = 0; i < point_num; i++) {
         if (poly_points[i].y > maxY) {
-            maxY = poly_points[i].y;
+            maxY = ceil(poly_points[i].y);
         }
         if (poly_points[i].y < minY) {
-            minY = poly_points[i].y;
+            minY = floor(poly_points[i].y);
         }
     }
 }
@@ -183,16 +203,22 @@ void Polygon::getMinMaxY() {
 
 void Polygon::buildSET() {
     getMinMaxY();
-    for (int i = 0; i < maxY - minY; i++) {
-        vector<Edge> edges;
-        SET.push_back(edges);
+    if (SET.size() != 0) {
+        SET.clear();
+    }
+    if (SET.size() <= maxY - minY + 2) {
+        for (int i = 0; i <= maxY - minY; i++) {
+            vector<Edge> edges;
+            SET.push_back(edges);
+        }
     }
     for (int i = 0; i < point_num; i++) {
-        int scan_line_index = poly_edges[i].down.y - minY;
-        SET[scan_line_index].push_back(poly_edges[i].edge);
+        int scan_line_index = round(poly_edges[i].down.y) - minY;
+            SET[scan_line_index].push_back(poly_edges[i].edge);
+
     }
     // sorting
-    for (int i = 0; i < maxY - minY; i++) {
+    for (int i = 0; i <= maxY - minY; i++) {
         SET[i] = edgeSort(SET[i]);
         }
     }
@@ -229,7 +255,7 @@ void Polygon::addNewEdge(int index) {
 void Polygon::removeOldEdge(int index) {
     for (int i = 0; i < AEL[index].size(); i++) {
         Edge edge = AEL[index][i];
-        if (index + minY == edge.yMax) {
+        if (index + round(minY) == round(edge.yMax)) {
             AEL[index].erase(AEL[index].begin() + i);
             i--;
         }
@@ -254,8 +280,8 @@ void Polygon::updateX(int index) {
  * @param index
  */
 void Polygon::fillScanLine(int index) {
-    for (int i = 0; i < AEL[index].size() - 1; i+=2) {
-        for (int x0 = AEL[index][i].x; x0 < AEL[index][i+1].x; x0++) {
+    for (int i = 0; i < (int)(AEL[index].size() - 1); i+=2) {
+        for (int x0 = AEL[index][i].x ; x0 <= AEL[index][i+1].x; x0++) {
             draw_pixel(x0, index + minY);
         }
     }
@@ -269,11 +295,17 @@ void Polygon::draw_pixel(int x, int y){
 }
 
 void Polygon::fillPolygon() {
+    draw_outline("DDA");
     buildPoly();
     buildSET();
-    for (int i = 0; i < maxY - minY; i++) {
-        vector<Edge> edges;
-        AEL.push_back(edges);
+    if (AEL.size() != 0) {
+        AEL.clear();
+    }
+    if (AEL.size() <= maxY - minY + 2) {
+        for (int i = 0; i <= maxY - minY; i++) {
+            vector<Edge> edges;
+            AEL.push_back(edges);
+        }
     }
     for (int i = 0; i < maxY - minY; i++) {
         addNewEdge(i);
@@ -282,6 +314,78 @@ void Polygon::fillPolygon() {
         fillScanLine(i);
         updateX(i);
     }
+
+}
+
+void Polygon::draw_outline(string algorithm) {
+    Point start, end;
+    if (poly_points.size() == 0) {
+        return;
+    }
+    for (int i = 0; i < (int)poly_points.size(); i++) {
+        if (i == 0) {
+            start = poly_points[0];
+        }
+        else {
+            end  = poly_points[i];
+            if (algorithm == "DDA") {
+                lineDDA(start.x, start.y, end.x, end.y);
+            }
+            else if (algorithm == "Bres") {
+                lineBres(start.x, start.y, end.x, end.y);
+            }
+            start = end;
+        }
+    }
+    start = poly_points[poly_points.size() - 1];
+    end  = poly_points[0];
+    if (algorithm == "DDA") {
+        lineDDA(start.x, start.y, end.x, end.y);
+    }
+    else if (algorithm == "Bres") {
+        lineBres(start.x, start.y, end.x, end.y);
+    }
+}
+
+void Polygon::translate(GLfloat tx, GLfloat ty) {
+    for (int i = 0; i < poly_points.size(); i++) {
+        Polygon::Point p = poly_points[i];
+        Polygon::Point temp;
+        temp.x = p.x + tx;
+        temp.y = p.y + ty;
+        poly_points[i] = temp;
+    }
+}
+
+void Polygon::rotate(Polygon::Point pivPT, GLdouble theta) {
+    for (int i = 0; i < poly_points.size(); i++) {
+        Point p = poly_points[i];
+        Polygon::Point temp;
+        temp.x = pivPT.x + (p.x - pivPT.x) * cos(theta) - (p.y - pivPT.y) * sin(theta);
+        temp.y = pivPT.y + (p.x - pivPT.x) * sin(theta) + (p.y - pivPT.y) * cos(theta);
+        poly_points[i] = temp;
+    }
+}
+
+void Polygon::scale(Polygon::Point fixedPT, GLfloat sx, GLfloat sy) {
+    for (int i = 0; i < poly_points.size(); i++) {
+        Point p = poly_points[i];
+        Point temp;
+        temp.x = p.x * sx + fixedPT.x * (1 - sx);
+        temp.y = p.y * sy + fixedPT.y * (1 - sy);
+        poly_points[i] = temp;
+    }
+}
+
+void Polygon::compute_centroid() {
+    float  amount_x = 0, amount_y = 0;
+    for (Point p: poly_points) {
+        amount_x += p.x;
+        amount_y += p.y;
+    }
+    centroid.x = amount_x / poly_points.size();
+    centroid.y = amount_y / poly_points.size();
+
 }
 
 

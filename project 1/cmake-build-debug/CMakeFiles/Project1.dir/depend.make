@@ -26,6 +26,9 @@ CMakeFiles/Project1.dir/Transform.cpp.o: ../Transform.h
 CMakeFiles/Project1.dir/Util.cpp.o: ../Util.cpp
 CMakeFiles/Project1.dir/Util.cpp.o: ../Util.h
 
+CMakeFiles/Project1.dir/ViewGL.cpp.o: ../ClippingPolygon.h
+CMakeFiles/Project1.dir/ViewGL.cpp.o: ../ModelGL.h
+CMakeFiles/Project1.dir/ViewGL.cpp.o: ../Polygon.h
 CMakeFiles/Project1.dir/ViewGL.cpp.o: ../ViewGL.cpp
 CMakeFiles/Project1.dir/ViewGL.cpp.o: ../ViewGL.h
 
@@ -34,5 +37,6 @@ CMakeFiles/Project1.dir/main.cpp.o: ../ClippingPolygon.h
 CMakeFiles/Project1.dir/main.cpp.o: ../ModelGL.h
 CMakeFiles/Project1.dir/main.cpp.o: ../Polygon.h
 CMakeFiles/Project1.dir/main.cpp.o: ../Util.h
+CMakeFiles/Project1.dir/main.cpp.o: ../ViewGL.h
 CMakeFiles/Project1.dir/main.cpp.o: ../main.cpp
 

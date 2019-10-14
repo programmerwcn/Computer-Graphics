@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug"/>
+				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug"/>
+				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug"/>
+				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project1">
-				<Option output="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/Project1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug"/>
+				<Option output="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/Project1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project1"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project1"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project1/fast">
-				<Option output="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/Project1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug"/>
+				<Option output="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/Project1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,65 +77,65 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project1/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project1/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/christine/Documents/Study/Grade\ 3/大三上/课程/Computer\ Graphics/Computer-Graphics/project\ 1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Clipping.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Clipping.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ClippingPolygon.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ClippingPolygon.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ControllerGL.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ControllerGL.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ModelGL.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ModelGL.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Transform.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Transform.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Util.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Util.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ViewGL.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ViewGL.h">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/main.cpp">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/main.cpp">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/CMakeLists.txt">
+		<Unit filename="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

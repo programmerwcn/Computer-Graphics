@@ -7,11 +7,14 @@
 
 #include <vector>
 #include <list>
+#include <string>
+#include <OpenGL/gl.h>
+#include <GLUT/glut.h>
 using namespace std;
 class Polygon {
-int id;
 
 public:
+    int id;
     vector<vector<int>> pixels;
     int point_num;
     int minY, maxY;
@@ -30,6 +33,7 @@ public:
         Point down;
         Edge edge;
     };
+    Point centroid;
     vector<Point> poly_points;
     vector<Poly_edge> poly_edges;
     vector<vector<Edge>> SET;
@@ -40,6 +44,7 @@ public:
 
     void add_pixel(int x, int y);
     static void lineDDA(int x0, int y0, int xEnd, int yEnd);
+    void draw_outline(string algorithm);
     static void lineBres(int x0, int y0, int xEnd, int yEnd);
 
     void buildPoly();
@@ -52,7 +57,11 @@ public:
     void getMinMaxY();
     static void draw_pixel(int x, int y);
     void fillPolygon();
+    void translate(GLfloat tx, GLfloat ty);
+    void rotate(Point pivPT, GLdouble theta);
+    void scale(Polygon::Point fixedPT, GLfloat sx, GLfloat sy);
     vector<Edge> edgeSort(vector<Edge> unsorted_edge);
+    void compute_centroid();
 };
 
 

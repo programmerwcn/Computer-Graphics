@@ -14,6 +14,7 @@
 #include <GLUT/glut.h>
 #include "Clipping.h"
 #include "ClippingPolygon.h"
+#include <ctype.h>
 
 #else //linux
 #include <GL/gl.h>
@@ -30,6 +31,11 @@
 #include <string>
 #include "ModelGL.h"
 #include "Util.h"
+#include "ViewGL.h"
+
+int choice;
+int poly_id;
+float tx, ty, sx, sy, theta;
 
 
 using namespace std;
@@ -48,8 +54,12 @@ float pixel_size;
 int win_height;
 int win_width;
 
+ClippingPolygon clippingPolygon;
 ModelGL myModelGL;
+ViewGL viewGl;
 
+
+Polygon::Point wMin, wMax;
 
 void init();
 void idle();
@@ -62,6 +72,8 @@ void motion(int x, int y);
 void check();
 void view(Polygon polygon);
 void read_file(string path);
+void write_file(string path);
+void user_interface();
 
 
 
@@ -79,6 +91,15 @@ int main(int argc, char **argv)
     /*Window information*/
     win_height = grid_height*pixel_size;
     win_width = grid_width*pixel_size;
+
+    wMin.x = 0;
+    wMin.y = 0;
+    wMax.x = win_width;
+    wMax.y = win_height;
+
+    viewGl.wMin = wMin;
+    viewGl.wMax = wMax;
+
 
     /*Set up glut functions*/
     /** See https://www.opengl.org/resources/libraries/glut/spec3/spec3.html ***/
@@ -101,6 +122,7 @@ int main(int argc, char **argv)
 
     //initialize opengl variables
     init();
+    read_file("Resource/test_scene");
     //start glut event loop
     glutMainLoop();
     return 0;
@@ -131,47 +153,48 @@ void display()
     //clears the opengl Modelview transformation matrix
     glLoadIdentity();
 
-//    //draws every other pixel on the screen
-//    for (int j = 0; j < grid_height; j+=2){
-//        for (int i = 0; i < grid_width; i+=2){
-//            //this is the only "rendering call you should make in project 1"
-//            draw_pix(i,j);
-//        }
-//    }
-Polygon myPolygon;
-//Polygon::Point point1, point2, point3, wMin, wMax;
-//point1.x = 0;
-//point1.y = 0;
-//point2.x = 20;
-//point2.y = 20;
-//point3.x = 40;
-//point3.y = 0;
-//wMin.x = 10;
-//wMin.y = 5;
-//wMax.x = 30;
-//wMax.y = 30;
-//Polygon::Point pIN[3] = {point1, point2, point3};
-//Polygon::Point *pOUT = new Polygon::Point;
 //
-//ClippingPolygon my_clipping_polygon;
-//GLint n = my_clipping_polygon.polygon_clip_Suth_Hodg(wMin, wMax, 3, pIN, pOUT);
-//for (int i = 0; i < n; i++) {
-//    cout << (*pOUT).x << "y" << (*pOUT).y << endl;
-//    Polygon::Point p = (*pOUT);
-//    myPolygon.poly_points.push_back(p);
-//    pOUT++;
-//}
 //
-//pOUT = NULL;
-//delete pOUT;
-//
-//myPolygon.fillPolygon();
-//
-read_file("Resource/test_scene");
+switch (choice) {
+    case 0:
+        if (poly_id == 0) {
+            for (Polygon p: myModelGL.polygons) {
+                viewGl.raster(p);
+            }
+        }
+        else {
+            Polygon p = myModelGL.polygons[poly_id - 1];
+            viewGl.raster(p);
+        }
+        break;
+    case 1:
+        if (poly_id == 0) {
+    for (Polygon p: myModelGL.polygons) {
+        viewGl.view_outline("DDA", p);
+    }
+}
+        else {
+    Polygon p = myModelGL.polygons[poly_id - 1];
+    viewGl.view_outline("DDA",p);
+}
+        break;
+    case 2:
+        if (poly_id == 0) {
+    for (Polygon p: myModelGL.polygons) {
+        viewGl.view_outline("Bres", p);
+    }
+}
+        else {
+    Polygon p = myModelGL.polygons[poly_id - 1];
+    viewGl.view_outline("Bres",p);
+}
+        break;
+        // translate
 
-myPolygon = myModelGL.polygons[0];
-myPolygon.fillPolygon();
+    default:
+        break;
 
+}
 
     //blits the current opengl framebuffer on the screen
     glutSwapBuffers();
@@ -225,6 +248,103 @@ void key(unsigned char ch, int x, int y)
 {
     switch(ch)
     {
+        case '0':
+            poly_id = 0;
+            choice = 0;
+//            viewGl.view_outline("DDA", myModelGL.polygons[0]);
+            break;
+        case '1':
+            poly_id = 1;
+            choice = 0;
+            break;
+        case '2':
+            poly_id = 2;
+            choice = 0;
+            break;
+        case '3':
+            poly_id = 3;
+            choice = 0;
+            break;
+        case '4':
+            poly_id = 4;
+            choice = 0;
+            break;
+        case '5':
+            poly_id = 5;
+            choice = 0;
+            break;
+            // draw outline with DDA
+        case 'D':
+            choice = 1;
+            break;
+            // draw outlinr with Bres
+        case 'B':
+            choice = 2;
+            //translate
+        case 'T':
+            cout << "Input the translate size in x" << endl;
+            cin >> tx;
+            cout << "Input translate size in y" << endl;
+            cin >> ty;
+            if (poly_id == 0) {
+                for (int i = 0; i < myModelGL.polygons.size(); i++){
+                    myModelGL.polygons[i].translate(tx, ty);
+                }
+            }
+            else {
+                myModelGL.polygons[poly_id - 1].translate(tx, ty);
+            }
+            break;
+            // scaling
+        case 'S':
+
+                            cout << "Input scale size in x for polygon " << endl;
+                            cin >> sx;
+                            cout << "Input scale size in y for polygon " << endl;
+                            cin >> sy;
+            if (poly_id == 0) {
+                for (int i = 0; i < myModelGL.polygons.size(); i++){
+                    myModelGL.polygons[i].compute_centroid();
+                    myModelGL.polygons[i].scale(myModelGL.polygons[i].centroid, sx, sy);
+                }
+            }
+            else {
+                myModelGL.polygons[poly_id - 1].compute_centroid();
+                myModelGL.polygons[poly_id - 1].scale(myModelGL.polygons[poly_id - 1].centroid, sx, sy);
+            }
+
+                    break;
+        case 'R':
+            cout << "Input rotate angle theta" << endl;
+            cin >> theta;
+            if (poly_id == 0) {
+                for (int i = 0; i < myModelGL.polygons.size(); i++){
+                    myModelGL.polygons[i].compute_centroid();
+                    myModelGL.polygons[i].rotate(myModelGL.polygons[i].centroid, theta);
+                }
+            }
+            else {
+                myModelGL.polygons[poly_id - 1].compute_centroid();
+                myModelGL.polygons[poly_id - 1].rotate(myModelGL.polygons[poly_id - 1].centroid, theta);
+            }
+            break;
+
+        case 'A':
+            write_file("Resource/test_scene");
+            break;
+
+        case 'W':
+            cout << "Input wMin x" << endl;
+            cin >> viewGl.wMin.x;
+            cout << "Input wMin y" << endl;
+            cin >> viewGl.wMin.y;
+            cout << "Input wMax x" << endl;
+            cin >> viewGl.wMax.x;
+            cout << "Input wMax y" << endl;
+            cin >> viewGl.wMax.y;
+
+            break;
+
         default:
             //prints out which key the user hit
             printf("User hit the \"%c\" key\n",ch);
@@ -290,6 +410,7 @@ void read_file(string path) {
     Polygon current_polygon;
     int i = 0;
     int num_of_points = 1;
+    int poly_id = 1;
 
     // open failure
     if (! in.is_open())
@@ -303,27 +424,201 @@ else if (line == "") {
     i++;
 }
 else {
+    i++;
     vector<string> current_line = Util::split(line, " ");
     if (current_line.size() == 1) {
         num_of_points = stoi(line);
         current_polygon.point_num = num_of_points;
-        i++;
+
     }
     else {
         // set poly points
         Polygon::Point current_point;
-        current_point.x = stoi(current_line[0]);
-        current_point.y = stoi(current_line[1]);
+        current_point.x = stof(current_line[0]);
+        current_point.y = stof(current_line[1]);
         current_polygon.poly_points.push_back(current_point);
         num_of_points -- ;
         // end of poly points
-        if (num_of_points == 0)
-        myModelGL.polygons.push_back(current_polygon);
-        i++;
+        if (num_of_points == 0) {
+            Polygon temp = current_polygon;
+            temp.id = poly_id;
+            poly_id ++;
+            myModelGL.polygons.push_back(temp);
+            current_polygon.poly_points.clear();
+            current_polygon.point_num = 0;
+        }
+
     }
 
 }
     }
+    in.close();
+
+}
+
+void write_file(string path) {
+ofstream out;
+out.open(path);
+out << myModelGL.polygons.size() << endl;
+out << "" << endl;
+for (Polygon p: myModelGL.polygons) {
+    out << p.poly_points.size() << endl;
+    for (Polygon::Point point: p.poly_points) {
+        out << point.x << " " << point.y << endl;
+    }
+    out << "" << endl;
+}
+out.close();
+}
+
+void user_interface() {
+    string input_string;
+    int polygon_id;
+    int manipulate_choice;
+    cout << "You have 5 polygons, which one do you like to manipulate? Input 0-5, 0 for all polygons while 1-5 for the polygon id" << endl;
+    cin >> input_string;
+    if (input_string.length() != 1 || !isdigit(input_string[0])) {
+        cout << "Invalid Input!" << endl;
+        return;
+    }
+//    else {
+//        polygon_id = stoi(input_string);
+//        if (polygon_id != 0 && polygon_id != 1 && polygon_id != 2 && polygon_id != 3 && polygon_id != 4 && polygon_id != 5) {
+//            cout << "Invalid Input!" << endl;
+//            return;
+//        }
+//        // manipulation
+//        cout << "How do you like to manipulate the polygon?\n"
+//        << "Input 0 -- show the polygon with DDA algorithm.\n"
+//        << "1 -- show the polygon with Bresenham algorithm.\n"
+//        << "2 -- rasterize the polygon.\n"
+//        << "3 -- scale the polygon and show. \n"
+//        << "4 -- translate the polygon and show. \n"
+//        << "5 -- rotate the polygon and show. \n" << endl;
+//        cin >> input_string;
+//        if (input_string.length() != 1 || !isdigit(input_string[0])) {
+//            cout << "Invalid Input!" << endl;
+//            return;
+//        }
+//        else {
+//            manipulate_choice = stoi(input_string);
+//            switch (manipulate_choice) {
+//                case 0:
+//                    if (polygon_id == 0) {
+//                        for (Polygon p: myModelGL.polygons) {
+//                            viewGl.view_outline("DDA", p);
+//                        }
+//                    }
+//                    else {
+//                        viewGl.raster(myModelGL.polygons[polygon_id - 1]);
+//                    }
+//                    break;
+//
+//                case 1:
+//                    if (polygon_id == 0) {
+//                        for (Polygon p: myModelGL.polygons) {
+//                            viewGl.view_outline("Bres", p);
+//                        }
+//                    }
+//                    else {
+//                        viewGl.raster(myModelGL.polygons[polygon_id - 1]);
+//                    }
+//                    break;
+//
+//                case 2:
+//                    if (polygon_id == 0) {
+                for (Polygon p: myModelGL.polygons){
+                    //p.fillPolygon();
+                    glutPostRedisplay();
+                    p.fillPolygon();
+                    //viewGl.raster(p);
+                }
+//            }
+//                    else {
+//                        viewGl.raster(myModelGL.polygons[polygon_id - 1]);
+//            }
+//                    break;
+//
+//                case 3:
+//                    GLfloat sx, sy;
+//
+//                    if (polygon_id == 0) {
+//                        for (Polygon p : myModelGL.polygons){
+//                            // ！！no exception check
+//                            cout << "Input scale size in x for polygon " << p.id << endl;
+//                            cin >> sx;
+//                            cout << "Input scale size in y for polygon " << p.id << endl;
+//                            cin >> sy;
+//                            p.compute_centroid();
+//                            p.scale(p.centroid, sx, sy);
+//                            viewGl.raster(p);
+//                        }
+//                    }
+//                    else {
+//                        cout << "Input scale size in x for polygon " << polygon_id << endl;
+//                        cin >> sx;
+//                        cout << "Input scale size in y for polygon " << polygon_id << endl;
+//                        cin>> sy;
+//                        myModelGL.polygons[polygon_id - 1].compute_centroid();
+//                        myModelGL.polygons[polygon_id - 1].scale(myModelGL.polygons[polygon_id - 1].centroid, sx, sy);
+//                        viewGl.raster(myModelGL.polygons[polygon_id - 1]);
+//                    }
+//                    break;
+//
+//                case 4:
+//                    GLfloat tx, ty;
+//
+//                    if (polygon_id == 0) {
+//                        for (Polygon p : myModelGL.polygons){
+//                            // ！！no exception check
+//                            cout << "Input translate size in x for polygon " << p.id << endl;
+//                            cin >> tx;
+//                            cout << "Input translate size in y for polygon " << p.id << endl;
+//                            cin >> ty;
+//                            p.translate(tx, ty);
+//                            viewGl.raster(p);
+//                        }
+//                    }
+//                    else {
+//                        cout << "Input translate size in x for polygon " << polygon_id << endl;
+//                        cin >> tx;
+//                        cout << "Input translate size in y for polygon " << polygon_id << endl;
+//                        cin>> ty;
+//                        myModelGL.polygons[polygon_id - 1].translate(tx, ty);
+//                        viewGl.raster(myModelGL.polygons[polygon_id - 1]);
+//                    }
+//                    break;
+//
+//                case 5:
+//                    GLfloat theta;
+//
+//                    if (polygon_id == 0) {
+//                        for (Polygon p : myModelGL.polygons){
+//                            // ！！no exception check
+//                            cout << "Input rotate angle theta for polygon " << p.id << endl;
+//                            cin >> theta;
+//                            p.compute_centroid();
+//                            p.rotate(p.centroid, theta);
+//                            viewGl.raster(p);
+//                        }
+//                    }
+//                    else {
+//                        cout << "Input rotate angle theta for polygon " << polygon_id << endl;
+//                        cin >> theta;
+//                        myModelGL.polygons[polygon_id - 1].compute_centroid();
+//                        myModelGL.polygons[polygon_id - 1].rotate(myModelGL.polygons[polygon_id - 1].centroid, theta);
+//                        viewGl.raster(myModelGL.polygons[polygon_id - 1]);
+//                    }
+//                    break;
+//
+//                default:
+//                    break;
+//
+//            }
+//        }
+//
+//
+//    }
 
 }
 

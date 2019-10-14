@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1"
+CMAKE_SOURCE_DIR = "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project1.dir/depend.make
@@ -59,120 +59,120 @@ include CMakeFiles/Project1.dir/flags.make
 
 CMakeFiles/Project1.dir/main.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project1.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/main.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project1.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/main.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/main.cpp"
 
 CMakeFiles/Project1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/main.cpp" > CMakeFiles/Project1.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/main.cpp" > CMakeFiles/Project1.dir/main.cpp.i
 
 CMakeFiles/Project1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/main.cpp" -o CMakeFiles/Project1.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/main.cpp" -o CMakeFiles/Project1.dir/main.cpp.s
 
 CMakeFiles/Project1.dir/ModelGL.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/ModelGL.cpp.o: ../ModelGL.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project1.dir/ModelGL.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ModelGL.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ModelGL.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project1.dir/ModelGL.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ModelGL.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.cpp"
 
 CMakeFiles/Project1.dir/ModelGL.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/ModelGL.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ModelGL.cpp" > CMakeFiles/Project1.dir/ModelGL.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.cpp" > CMakeFiles/Project1.dir/ModelGL.cpp.i
 
 CMakeFiles/Project1.dir/ModelGL.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/ModelGL.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ModelGL.cpp" -o CMakeFiles/Project1.dir/ModelGL.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.cpp" -o CMakeFiles/Project1.dir/ModelGL.cpp.s
 
 CMakeFiles/Project1.dir/ViewGL.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/ViewGL.cpp.o: ../ViewGL.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project1.dir/ViewGL.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ViewGL.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ViewGL.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project1.dir/ViewGL.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ViewGL.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.cpp"
 
 CMakeFiles/Project1.dir/ViewGL.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/ViewGL.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ViewGL.cpp" > CMakeFiles/Project1.dir/ViewGL.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.cpp" > CMakeFiles/Project1.dir/ViewGL.cpp.i
 
 CMakeFiles/Project1.dir/ViewGL.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/ViewGL.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ViewGL.cpp" -o CMakeFiles/Project1.dir/ViewGL.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.cpp" -o CMakeFiles/Project1.dir/ViewGL.cpp.s
 
 CMakeFiles/Project1.dir/ControllerGL.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/ControllerGL.cpp.o: ../ControllerGL.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project1.dir/ControllerGL.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ControllerGL.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ControllerGL.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project1.dir/ControllerGL.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ControllerGL.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.cpp"
 
 CMakeFiles/Project1.dir/ControllerGL.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/ControllerGL.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ControllerGL.cpp" > CMakeFiles/Project1.dir/ControllerGL.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.cpp" > CMakeFiles/Project1.dir/ControllerGL.cpp.i
 
 CMakeFiles/Project1.dir/ControllerGL.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/ControllerGL.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ControllerGL.cpp" -o CMakeFiles/Project1.dir/ControllerGL.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.cpp" -o CMakeFiles/Project1.dir/ControllerGL.cpp.s
 
 CMakeFiles/Project1.dir/Polygon.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/Polygon.cpp.o: ../Polygon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project1.dir/Polygon.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Polygon.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project1.dir/Polygon.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Polygon.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.cpp"
 
 CMakeFiles/Project1.dir/Polygon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/Polygon.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.cpp" > CMakeFiles/Project1.dir/Polygon.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.cpp" > CMakeFiles/Project1.dir/Polygon.cpp.i
 
 CMakeFiles/Project1.dir/Polygon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/Polygon.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Polygon.cpp" -o CMakeFiles/Project1.dir/Polygon.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.cpp" -o CMakeFiles/Project1.dir/Polygon.cpp.s
 
 CMakeFiles/Project1.dir/Util.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/Util.cpp.o: ../Util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project1.dir/Util.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Util.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Util.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project1.dir/Util.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Util.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.cpp"
 
 CMakeFiles/Project1.dir/Util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/Util.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Util.cpp" > CMakeFiles/Project1.dir/Util.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.cpp" > CMakeFiles/Project1.dir/Util.cpp.i
 
 CMakeFiles/Project1.dir/Util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/Util.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Util.cpp" -o CMakeFiles/Project1.dir/Util.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.cpp" -o CMakeFiles/Project1.dir/Util.cpp.s
 
 CMakeFiles/Project1.dir/Clipping.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/Clipping.cpp.o: ../Clipping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project1.dir/Clipping.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Clipping.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Clipping.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project1.dir/Clipping.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Clipping.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.cpp"
 
 CMakeFiles/Project1.dir/Clipping.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/Clipping.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Clipping.cpp" > CMakeFiles/Project1.dir/Clipping.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.cpp" > CMakeFiles/Project1.dir/Clipping.cpp.i
 
 CMakeFiles/Project1.dir/Clipping.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/Clipping.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Clipping.cpp" -o CMakeFiles/Project1.dir/Clipping.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.cpp" -o CMakeFiles/Project1.dir/Clipping.cpp.s
 
 CMakeFiles/Project1.dir/ClippingPolygon.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/ClippingPolygon.cpp.o: ../ClippingPolygon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project1.dir/ClippingPolygon.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ClippingPolygon.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ClippingPolygon.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project1.dir/ClippingPolygon.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/ClippingPolygon.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.cpp"
 
 CMakeFiles/Project1.dir/ClippingPolygon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/ClippingPolygon.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ClippingPolygon.cpp" > CMakeFiles/Project1.dir/ClippingPolygon.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.cpp" > CMakeFiles/Project1.dir/ClippingPolygon.cpp.i
 
 CMakeFiles/Project1.dir/ClippingPolygon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/ClippingPolygon.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/ClippingPolygon.cpp" -o CMakeFiles/Project1.dir/ClippingPolygon.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.cpp" -o CMakeFiles/Project1.dir/ClippingPolygon.cpp.s
 
 CMakeFiles/Project1.dir/Transform.cpp.o: CMakeFiles/Project1.dir/flags.make
 CMakeFiles/Project1.dir/Transform.cpp.o: ../Transform.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project1.dir/Transform.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Transform.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Transform.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project1.dir/Transform.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1.dir/Transform.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.cpp"
 
 CMakeFiles/Project1.dir/Transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/Transform.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Transform.cpp" > CMakeFiles/Project1.dir/Transform.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.cpp" > CMakeFiles/Project1.dir/Transform.cpp.i
 
 CMakeFiles/Project1.dir/Transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/Transform.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/Transform.cpp" -o CMakeFiles/Project1.dir/Transform.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.cpp" -o CMakeFiles/Project1.dir/Transform.cpp.s
 
 # Object files for target Project1
 Project1_OBJECTS = \
@@ -200,7 +200,7 @@ Project1: CMakeFiles/Project1.dir/ClippingPolygon.cpp.o
 Project1: CMakeFiles/Project1.dir/Transform.cpp.o
 Project1: CMakeFiles/Project1.dir/build.make
 Project1: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Project1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Project1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -213,6 +213,6 @@ CMakeFiles/Project1.dir/clean:
 .PHONY : CMakeFiles/Project1.dir/clean
 
 CMakeFiles/Project1.dir/depend:
-	cd "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/project 1/cmake-build-debug/CMakeFiles/Project1.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/cmake-build-debug/CMakeFiles/Project1.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Project1.dir/depend
 

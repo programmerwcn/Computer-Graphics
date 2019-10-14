@@ -10,9 +10,9 @@
 #include "Polygon.h"
 class Transform {
 public:
-vector<Polygon::Point> translate_polygon(vector<Polygon::Point> verts, GLfloat tx, GLfloat ty);
-    vector<Polygon::Point> rotate_polygon(vector<Polygon::Point> verts, Polygon::Point pivPT, GLdouble theta);
-    vector<Polygon::Point> scale_polygon(vector<Polygon::Point> verts, Polygon::Point fixedPT, GLfloat sx, GLfloat sy);
+static vector<Polygon::Point> translate_polygon(vector<Polygon::Point> verts, GLfloat tx, GLfloat ty);
+    static vector<Polygon::Point> rotate_polygon(vector<Polygon::Point> verts, Polygon::Point pivPT, GLdouble theta);
+    static vector<Polygon::Point> scale_polygon(vector<Polygon::Point> verts, Polygon::Point fixedPT, GLfloat sx, GLfloat sy);
 };
 
 
