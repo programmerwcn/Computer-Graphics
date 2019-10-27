@@ -5,8 +5,16 @@
 #ifndef PROJECT1_TRANSFORM_H
 #define PROJECT1_TRANSFORM_H
 
+#if defined (__APPLE__) || defined(MACOSX)
 #include <OpenGL/gl.h>
+//#include <OpenGL/glu.h>
 #include <GLUT/glut.h>
+
+
+#else //linux
+#include <GL/gl.h>
+#include <GL/glut.h>
+#endif
 #include "Polygon.h"
 class Transform {
 public:

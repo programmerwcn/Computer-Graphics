@@ -2,9 +2,18 @@
 // Created by 吴小宁 on 2019/10/8.
 //
 
-#include "ClippingPolygon.h"
+#if defined (__APPLE__) || defined(MACOSX)
 #include <OpenGL/gl.h>
+//#include <OpenGL/glu.h>
 #include <GLUT/glut.h>
+
+
+#else //linux
+#include <GL/gl.h>
+#include <GL/glut.h>
+#endif
+
+#include "ClippingPolygon.h"
 #include "Polygon.h"
 #include <math.h>
 

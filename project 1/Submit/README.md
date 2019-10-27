@@ -1,6 +1,7 @@
 ## Compile
 
-- enter make-build-debug dictory:  `cd cmake-build-debug/`
+- enter make-build-debug dictory:  `cd cmake-build/`
+- Get makefile: `cmake ..`
 - Compile:  `make`
 - Run:  `./Project1`
 

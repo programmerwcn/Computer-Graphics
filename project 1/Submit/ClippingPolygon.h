@@ -5,8 +5,17 @@
 #ifndef PROJECT1_CLIPPINGPOLYGON_H
 #define PROJECT1_CLIPPINGPOLYGON_H
 
+#if defined (__APPLE__) || defined(MACOSX)
 #include <OpenGL/gl.h>
+//#include <OpenGL/glu.h>
 #include <GLUT/glut.h>
+
+
+#else //linux
+#include <GL/gl.h>
+#include <GL/glut.h>
+#endif
+
 #include "Polygon.h"
 
 const GLint N_CLIP = 4;

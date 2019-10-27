@@ -2,14 +2,23 @@
 // Created by 吴小宁 on 2019/10/4.
 //
 
+#if defined (__APPLE__) || defined(MACOSX)
+#include <OpenGL/gl.h>
+//#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
+
+
+#else //linux
+#include <GL/gl.h>
+#include <GL/glut.h>
+#endif
+
 #include <iostream>
 #include "Polygon.h"
 #include <math.h>
 #include <vector>
 #include <list>
-#include <OpenGL/gl.h>
-//#include <OpenGL/glu.h>
-#include <GLUT/glut.h>
+
 using namespace std;
 
 

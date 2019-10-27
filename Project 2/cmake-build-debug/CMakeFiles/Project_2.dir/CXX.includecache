@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project 2/main.cpp
+windows.h
+-
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+vector
+-
+fstream
+-
+iostream
+-
+string
+-
+string.h
+-
+

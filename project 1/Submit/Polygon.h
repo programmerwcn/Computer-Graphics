@@ -8,8 +8,17 @@
 #include <vector>
 #include <list>
 #include <string>
+
+#if defined (__APPLE__) || defined(MACOSX)
 #include <OpenGL/gl.h>
+//#include <OpenGL/glu.h>
 #include <GLUT/glut.h>
+
+
+#else //linux
+#include <GL/gl.h>
+#include <GL/glut.h>
+#endif
 using namespace std;
 class Polygon {
 

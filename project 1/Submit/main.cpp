@@ -12,9 +12,7 @@
 #include <OpenGL/gl.h>
 //#include <OpenGL/glu.h>
 #include <GLUT/glut.h>
-#include "Clipping.h"
-#include "ClippingPolygon.h"
-#include <ctype.h>
+
 
 #else //linux
 #include <GL/gl.h>
@@ -32,6 +30,9 @@
 #include "ModelGL.h"
 #include "Util.h"
 #include "ViewGL.h"
+#include "Clipping.h"
+#include "ClippingPolygon.h"
+#include <ctype.h>
 
 int choice;
 int poly_id;

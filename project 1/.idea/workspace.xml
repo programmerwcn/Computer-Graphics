@@ -13,15 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="167501c6-7ff3-4ac6-aae3-061e2a135eef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGraphics.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Polygon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Polygon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project1.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project1.dir/Polygon.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project1.dir/Polygon.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/glut_make_pixel/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glut_make_pixel/demo.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +72,7 @@
       <workItem from="1570740442118" duration="8004000" />
       <workItem from="1570755980948" duration="3087000" />
       <workItem from="1570825835488" duration="32159000" />
-      <workItem from="1571112895264" duration="2324000" />
+      <workItem from="1571112895264" duration="4169000" />
     </task>
     <servers />
   </component>
