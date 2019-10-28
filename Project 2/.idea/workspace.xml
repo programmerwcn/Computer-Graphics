@@ -12,61 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12b2f67d-67e9-4532-909d-62744d343f1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../project 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Project1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Project1.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/Clipping.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/Clipping.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/Clipping.h" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/Clipping.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/ClippingPolygon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/ClippingPolygon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/ClippingPolygon.h" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/ClippingPolygon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/Polygon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/Polygon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/Polygon.h" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/Polygon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/Transform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/Transform.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/Transform.h" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/Transform.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/Util.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/Util.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/Clipping.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/ClippingPolygon.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/ControllerGL.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/ModelGL.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/Polygon.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/Transform.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/Util.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/ViewGL.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/Project1.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/Project1.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project 1/Submit/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project 1/Submit/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Polygon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Polygon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Polygon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Polygon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/test_scene" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/test_scene" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project2.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project2.dir/Polygon.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project2.dir/Polygon.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project2.dir/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project2.dir/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bunny_scene" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bunny_scene" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_scene" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test_scene" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +82,7 @@
       <workItem from="1571690265692" duration="215000" />
       <workItem from="1571690484046" duration="13297000" />
       <workItem from="1572023395757" duration="3305000" />
-      <workItem from="1572060129649" duration="5680000" />
+      <workItem from="1572060129649" duration="19852000" />
     </task>
     <servers />
   </component>
@@ -151,8 +107,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>84</line>
-          <option name="timeStamp" value="6" />
+          <line>203</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -119,6 +119,10 @@ void Polygon::rotate3D(Polygon::Point p1, Polygon::Point p2, GLfloat angle) {
     GLfloat uy = (p2.y - p1.y) / axis_vector_length;
     GLfloat uz = (p2.z - p1.z) / axis_vector_length;
 
+    rotate_vector.x = ux;
+    rotate_vector.y = uy;
+    rotate_vector.z = uz;
+
     translate3D((0 - p1.x), (0 - p1.y), (0 - p1.z));
 
     matrix_set_identity(mat_quat_rot);
@@ -141,6 +145,102 @@ void Polygon::rotate3D(Polygon::Point p1, Polygon::Point p2, GLfloat angle) {
 
     translate3D(p1.x, p1.y, p1.z);
 }
+
+/**
+ * compute the centroid of current polygon
+ */
+void Polygon::get_centroid() {
+    GLfloat x = 0, y = 0, z = 0;
+    for(Point point: poly_points) {
+        x += point.x;
+        y += point.y;
+        z += point.z;
+    }
+    centroid.x = x / (GLfloat)poly_points.size();
+    centroid.y = y / (GLfloat )poly_points.size();
+    centroid.z = z / (GLfloat )poly_points.size();
+}
+
+/**
+ * Scale the polygon according to centroid and given size
+ * @param sx
+ * @param sy
+ * @param sz
+ */
+void Polygon::scale3D(GLfloat sx, GLfloat sy, GLfloat sz) {
+    Matrix4x4  mat_scale;
+
+    // initialize
+    matrix_set_identity(mat_scale);
+    mat_scale[0][0] = sx;
+    mat_scale[0][3] = (1 - sx) * centroid.x;
+    mat_scale[1][1] = sy;
+    mat_scale[1][3] = (1 - sy) * centroid.y;
+    mat_scale[2][2] = sz;
+    mat_scale[2][3] = (1 - sz) * centroid.z;
+
+    initialize_mat_rot();
+    for (int i = 0; i < poly_points.size(); i ++) {
+        set_mat_rot(i);
+        matrix_multiply(mat_scale, mat_rot);
+        get_mat_rot(i);
+    }
+}
+
+
+void Polygon::draw_polygon(string plane, int grid_width, int grid_height) {
+    if (plane == "xy") {
+        for (Edge edge: poly_edges) {
+            Point p_start = poly_points[edge.start_p];
+            Point p_end = poly_points[edge.end_p];
+            glBegin(GL_LINES);
+            glColor3f(0,0,1);
+            int x0 = (p_start.x * 0.8 + 0.1) * grid_width;
+            int y0 = (p_start.y * 0.8 + 0.1) * grid_height;
+            int x1 = (p_end.x * 0.8 + 0.1) * grid_width;
+            int y1 = (p_end.y * 0.8 + 0.1) * grid_height;
+            glVertex2f(x0, y0);
+            glVertex2f(x1, y1);
+            glEnd();
+        }
+    }
+    else if (plane == "yz") {
+        for (Edge edge: poly_edges) {
+            Point p_start = poly_points[edge.start_p];
+            Point p_end = poly_points[edge.end_p];
+            glBegin(GL_LINES);
+            glColor3f(0,0,1);
+            int x0 = (p_start.y * 0.8 + 0.1) * grid_width;
+            int y0 = (p_start.z * 0.8 + 0.1) * grid_height;
+            int x1 = (p_end.y * 0.8 + 0.1) * grid_width;
+            int y1 = (p_end.z * 0.8 + 0.1) * grid_height;
+            glVertex2f(x0, y0);
+            glVertex2f(x1, y1);
+            glEnd();
+        }
+    }
+    else if (plane == "xz") {
+        for (Edge edge: poly_edges) {
+            Point p_start = poly_points[edge.start_p];
+            Point p_end = poly_points[edge.end_p];
+            glBegin(GL_LINES);
+            glColor3f(0,0,1);
+            int x0 = (p_start.x * 0.8 + 0.1) * grid_width;
+            int y0 = (p_start.z * 0.8 + 0.1) * grid_height;
+            int x1 = (p_end.x * 0.8 + 0.1) * grid_width;
+            int y1 = (p_end.z * 0.8 + 0.1) * grid_height;
+            glVertex2f(x0, y0);
+            glVertex2f(x1, y1);
+            glEnd();
+        }
+    }
+}
+
+//void Polygon::clear_rotate_vector() {
+//    rotate_vector.x = 0;
+//    rotate_vector.y = 0;
+//    rotate_vector.z = 0;
+//}
 
 
 

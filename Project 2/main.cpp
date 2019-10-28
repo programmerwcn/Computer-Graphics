@@ -52,6 +52,13 @@ vector<Polygon> polygons;
 // file name
 string file_name;
 
+int poly_id;
+char choice;
+
+struct Bounding_Box {
+    GLfloat x_min, x_max, y_min, y_max, z_min, z_max;
+};
+Bounding_Box boundingBox;
 
 void init();
 void idle();
@@ -63,27 +70,31 @@ void mouse(int button, int state, int x, int y);
 void motion(int x, int y);
 void check();
 vector<string> split(const string& str, const string& delim);
-void read_file(string path);
+int read_file(string path);
 void write_file(string path);
+// bounding box
+void initialize_bounding();
+void set_bounding(Polygon polygon);
+void apply_bounding(Polygon & polygon);
+void normalize();
+
 
 
 
 int main(int argc, char **argv)
 {
+file_name = "test_scene";
+read_file(file_name);
+normalize();
+poly_id = 0;
 
-    file_name = "test_scene";
-    read_file(file_name);
-    Polygon::Point p1, p2;
-    p1.x = 0;
-    p1.y = 0;
-    p1.z = 0;
-    p2.x = 0;
-    p2.y = 1;
-    p2.z = 0;
-    GLfloat angle = 0.78;
-    for (int i = 0; i < polygons.size(); i++) {
-        polygons[i].rotate3D(p1, p2, angle);
-    }
+//    for (int i = 0; i < polygons.size(); i++) {
+//        polygons[i].scale3D(1, 1, 1);
+//        polygons[i].initialize_bounding();
+//        polygons[i].set_bounding();
+//        polygons[i].apply_bounding();
+//    }
+
     //the number of pixels in the grid
     grid_width = 100;
     grid_height = 100;
@@ -144,6 +155,9 @@ void idle()
 
 //this is where we render the screen
 void display() {
+    if (polygons.size() == 0) {
+        return;
+    }
     Polygon::Point p_origion;
     //clears the screen
     glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
@@ -161,25 +175,42 @@ void display() {
     glVertex2f(grid_width / 2, grid_height);
     glEnd();
 
+    if (file_name == "") {
+        return;
+    }
+
     //定义在左上角的区域, xy plane
     p_origion.x = 0;
     p_origion.y = win_height / 2;
     glColor3f(0, 0, 1);
     glViewport(p_origion.x, p_origion.y, win_width / 2, win_width / 2);
-    for (int i = 0; i < polygons.size(); i++) {
-        Polygon p = polygons[i];
-        for (Polygon::Edge edge: p.poly_edges) {
-            Polygon::Point p_start = p.poly_points[edge.start_p];
-            Polygon::Point p_end = p.poly_points[edge.end_p];
+    if (poly_id == 0) {
+        // draw rotate_vector
+        if (choice == 'R') {
             glBegin(GL_LINES);
-            int x0 = trans + p_start.x * grid_width;
-            int y0 = trans + p_start.y * grid_height;
-            int x1 = trans + p_end.x * grid_width;
-            int y1 = trans + p_end.y * grid_height;
-            glVertex2f(x0, y0);
-            glVertex2f(x1, y1);
+            glColor3f(1.0, 0.0, 0.0);
+            glVertex2f(polygons[0].rotate_vector.x * grid_width, polygons[0].rotate_vector.y * grid_height);
+            glVertex2f(0, 0);
             glEnd();
         }
+
+        for (int i = 0; i < polygons.size(); i++) {
+            Polygon p = polygons[i];
+            p.draw_polygon("xy", grid_width, grid_height);
+        }
+    }
+    else {
+        if (choice == 'R') {
+            glBegin(GL_LINES);
+            glColor3f(1.0, 0.0, 0.0);
+            glVertex2f(polygons[poly_id - 1].rotate_vector.x * grid_width,
+                       polygons[poly_id - 1].rotate_vector.y * grid_height);
+            glVertex2f(0, 0);
+            glEnd();
+        }
+
+        Polygon p = polygons[poly_id -1];
+        p.draw_polygon("xy", grid_width, grid_height);
     }
 
 
@@ -188,20 +219,33 @@ void display() {
     p_origion.y = win_height / 2;
     glColor3f(0,0,1);
     glViewport(p_origion.x, p_origion.y, win_width/2, win_width/2);
-    for (int i = 0; i < polygons.size(); i++) {
-        Polygon p = polygons[i];
-        for (Polygon::Edge edge: p.poly_edges) {
-            Polygon::Point p_start = p.poly_points[edge.start_p];
-            Polygon::Point p_end = p.poly_points[edge.end_p];
+    if (poly_id == 0) {
+        // draw rotate_vector
+        if (choice == 'R') {
             glBegin(GL_LINES);
-            int x0 = trans + p_start.x * grid_width;
-            int y0 = trans + p_start.z * grid_height;
-            int x1 = trans + p_end.x * grid_width;
-            int y1 = trans + p_end.z * grid_height;
-            glVertex2f(x0, y0);
-            glVertex2f(x1, y1);
+            glColor3f(1.0, 0.0, 0.0);
+            glVertex2f(polygons[0].rotate_vector.x * grid_width, polygons[0].rotate_vector.z * grid_height);
+            glVertex2f(0, 0);
             glEnd();
         }
+
+        for (int i = 0; i < polygons.size(); i++) {
+            Polygon p = polygons[i];
+            p.draw_polygon("xz", grid_width, grid_height);
+        }
+    }
+    else {
+        if (choice == 'R') {
+            glBegin(GL_LINES);
+            glColor3f(1.0, 0.0, 0.0);
+            glVertex2f(polygons[poly_id - 1].rotate_vector.x * grid_width,
+                       polygons[poly_id - 1].rotate_vector.z * grid_height);
+            glVertex2f(0, 0);
+            glEnd();
+        }
+
+        Polygon p = polygons[poly_id -1];
+        p.draw_polygon("xz", grid_width, grid_height);
     }
     //定义在左下角的区域 yz plane
     p_origion.x = 0;
@@ -209,46 +253,34 @@ void display() {
     p_origion.z = 0;
     glColor3f(0,0,1);
     glViewport(p_origion.x, p_origion.y, win_width/2, win_width/2);
-    for (int i = 0; i < polygons.size(); i++) {
-        Polygon p = polygons[i];
-        for (Polygon::Edge edge: p.poly_edges) {
-            Polygon::Point p_start = p.poly_points[edge.start_p];
-            Polygon::Point p_end = p.poly_points[edge.end_p];
-                glBegin(GL_LINES);
-                int x0 = trans + p_start.y * grid_width;
-                int y0 = trans + p_start.z * grid_height;
-                int x1 = trans + p_end.y * grid_width;
-                int y1 = trans + p_end.z * grid_height;
-                glVertex2f(x0, y0);
-                glVertex2f(x1, y1);
-                glEnd();
-            }
+    if (poly_id == 0) {
+        // draw rotate_vector
+        if (choice == 'R') {
+            glBegin(GL_LINES);
+            glColor3f(1.0, 0.0, 0.0);
+            glVertex2f(polygons[0].rotate_vector.y * grid_width, polygons[0].rotate_vector.z * grid_height);
+            glVertex2f(0, 0);
+            glEnd();
         }
 
+        for (int i = 0; i < polygons.size(); i++) {
+            Polygon p = polygons[i];
+            p.draw_polygon("yz", grid_width, grid_height);
+        }
+    }
+    else {
+        if (choice == 'R') {
+            glBegin(GL_LINES);
+            glColor3f(1.0, 0.0, 0.0);
+            glVertex2f(polygons[poly_id - 1].rotate_vector.y * grid_width,
+                       polygons[poly_id - 1].rotate_vector.z * grid_height);
+            glVertex2f(0, 0);
+            glEnd();
+        }
 
-//    glBegin(GL_POLYGON);
-//    glColor3f(0.0, 0.0, 1.0);
-//    glVertex2f(0,0);
-//    glVertex2f(10,10);
-
-    //glEnd();
-
-//
-//
-
-//
-
-//
-//    //定义在右下角
-//    glColor3f(1.0, 1.0, 1.0);
-//    glViewport(200, 0, 200, 200);
-//    glBegin(GL_POLYGON);
-//    glVertex2f(-0.5, -0.5);
-//    glVertex2f(-0.5, 0.5);
-//    glVertex2f(0.5, 0.5);
-//    glVertex2f(0.5, -0.5);
-//    glEnd();
-//    glFlush();
+        Polygon p = polygons[poly_id -1];
+        p.draw_polygon("yz", grid_width, grid_height);
+    }
 
     //blits the current opengl framebuffer on the screen
     glutSwapBuffers();
@@ -297,16 +329,196 @@ void reshape(int width, int height)
     check();
 }
 
-//gets called when a key is pressed on the keyboard
-void key(unsigned char ch, int x, int y)
-{
-    switch(ch)
-    {
+void key(unsigned char ch, int x, int y) {
+    choice = ch;
+    switch (ch) {
+        case '0':
+         if (polygons.size() == 0) {
+             break;
+         }
+            poly_id = 0;
+            normalize();
+            cout << "Choose your manipulation choice.\n"
+                 << "Press T: Translate the polygon.\n"
+                 << "Press S: Scale the polygon with respond to its centroid. \n"
+                 << "Press R: Rotate the polygon with respond to its centroid. \n"
+                 << "Press Q: Quit the program.\n"
+                 << "Press F: Specify input file. \n"
+                 << endl;
+            break;
+        case '1':
+            if (polygons.size() < 1) {
+                break;
+            }
+            poly_id = 1;
+            normalize();
+            cout << "Choose your manipulation choice.\n"
+                 << "Press T: Translate the polygon.\n"
+                 << "Press S: Scale the polygon with respond to its centroid. \n"
+                 << "Press R: Rotate the polygon with respond to its centroid. \n"
+                 << "Press Q: Quit the program.\n"
+                 << "Press F: Specify input file. \n"
+                 << endl;
+            break;
+        case '2':
+            if (polygons.size() < 2) {
+                break;
+            }
+            poly_id = 2;
+            normalize();
+            cout << "Choose your manipulation choice.\n"
+                 << "Press T: Translate the polygon.\n"
+                 << "Press S: Scale the polygon with respond to its centroid. \n"
+                 << "Press R: Rotate the polygon with respond to its centroid. \n"
+                 << "Press Q: Quit the program.\n"
+                 << "Press F: Specify input file. \n"
+                 << endl;
+            break;
+        case '3':
+            if (polygons.size() < 3) {
+                break;
+            }
+            poly_id = 3;
+            normalize();
+            cout << "Choose your manipulation choice.\n"
+                 << "Press T: Translate the polygon.\n"
+                 << "Press S: Scale the polygon with respond to its centroid. \n"
+                 << "Press R: Rotate the polygon with respond to its centroid. \n"
+                 << "Press Q: Quit the program.\n"
+                 << "Press F: Specify input file. \n"
+                 << endl;
+            break;
+            //translate
+        case 'T':
+            if (polygons.size() == 0) {
+                break;
+            }
+            GLfloat tx, ty, tz;
+            cout << "Input the translate size in x" << endl;
+            cin >> tx;
+            cout << "Input translate size in y" << endl;
+            cin >> ty;
+            cout << "Input translate size in z" << endl;
+            cin >> tz;
+            if (poly_id == 0) {
+                for (int i = 0; i < polygons.size(); i++) {
+                    polygons[i].translate3D(tx, ty, tz);
+                }
+            } else {
+                polygons[poly_id - 1].translate3D(tx, ty, tz);
+            }
+            write_file(file_name);
+            normalize();
+            cout << "Choose your manipulation choice.\n"
+                 << "Press T: Translate the polygon.\n"
+                 << "Press S: Scale the polygon with respond to its centroid. \n"
+                 << "Press R: Rotate the polygon with respond to its centroid. \n"
+                 << "Press Q: Quit the program.\n"
+                 << "Press F: Specify input file. \n"
+                 << endl;
+            break;
+            // scaling
+        case 'S':
+            if (polygons.size() == 0) {
+                break;
+            }
+            GLfloat sx, sy, sz;
+            cout << "Input scale size in x for " << endl;
+            cin >> sx;
+            cout << "Input scale size in y for " << endl;
+            cin >> sy;
+            cout << "Input scale size in z for " << endl;
+            cin >> sz;
+            if (poly_id == 0) {
+                for (int i = 0; i < polygons.size(); i++) {
+                    polygons[i].get_centroid();
+                    polygons[i].scale3D(sx, sy, sz);
+                }
+            } else {
+                polygons[poly_id - 1].get_centroid();
+                polygons[poly_id - 1].scale3D(sx, sy, sz);
+            }
+            write_file(file_name);
+            normalize();
+            cout << "Choose your manipulation choice.\n"
+                 << "Press T: Translate the polygon.\n"
+                 << "Press S: Scale the polygon with respond to its centroid. \n"
+                 << "Press R: Rotate the polygon with respond to its centroid. \n"
+                 << "Press Q: Quit the program.\n"
+                 << "Press F: Specify input file. \n"
+                 << endl;
+
+            break;
+        case 'R':
+            if (polygons.size() == 0) {
+                break;
+            }
+            {
+            GLfloat theta;
+            Polygon::Point p1, p2;
+            string string1;
+            string coordinates[3];
+            cout << "Input rotate angle theta" << endl;
+            cin >> theta;
+            cout << "Input p1.x" << endl;
+            cin >> p1.x;
+            cout << "Input p1.y" << endl;
+            cin >> p1.y;
+            cout << "Input p1.z" << endl;
+            cin >> p1.z;
+            cout << "Input p2.x" << endl;
+            cin >> p2.x;
+            cout << "Input p2.y" << endl;
+            cin >> p2.y;
+            cout << "Input p2.z" << endl;
+            cin >> p2.z;
+            if (poly_id == 0) {
+                for (int i = 0; i < polygons.size(); i++) {
+                    polygons[i].get_centroid();
+                    polygons[i].rotate3D(p1, p2, theta);
+                }
+            } else {
+                polygons[poly_id - 1].get_centroid();
+                polygons[poly_id - 1].rotate3D(p1, p2, theta);
+            }
+            write_file(file_name);
+            normalize();
+            cout << "Choose your manipulation choice.\n"
+                 << "Press T: Translate the polygon.\n"
+                 << "Press S: Scale the polygon with respond to its centroid. \n"
+                 << "Press R: Rotate the polygon with respond to its centroid. \n"
+                 << "Press Q: Quit the program.\n"
+                 << "Press F: Specify input file. \n"
+                 << endl;
+            break;
+        }
+        case 'Q':
+            exit(0);
+            break;
+
+        case 'F':
+            polygons.clear();
+            // specify input file
+            cout << "Please input the file name('test_scene' or 'bunny_scene') that stores your polygons. \n"
+                 << "The file should be under the 'cmake-build-debug' dictionary. \n "
+                 << endl;
+            cin >> file_name;
+            if (!read_file(file_name)) {
+                cout << "Cannot find your file." << endl;
+                break;
+            }
+
         default:
             //prints out which key the user hit
-            printf("User hit the \"%c\" key\n",ch);
+            if (polygons.size() > 0) {
+                cout << "Choose the polygon to manipulate.\n"
+                     << "Press 1-" << polygons.size() << " to choose the corresponding polygon.\n"
+                     << "Press 0 to choose all polygons" << endl;
+            }
             break;
+
     }
+
     //redraw the scene after keyboard input
     glutPostRedisplay();
 }
@@ -357,7 +569,7 @@ void check()
     }
 }
 
-void read_file(string path) {
+int read_file(string path) {
     ifstream in(path);
     string line;
     Polygon current_polygon;
@@ -368,7 +580,7 @@ void read_file(string path) {
 
     // open failure
     if (! in.is_open())
-    { cout << "Error opening file"; exit (1); }
+    { return 0;}
 
     while (getline(in, line)) {
         if ((i == 0 && line != "") || line == "") {
@@ -418,6 +630,7 @@ void read_file(string path) {
         i++;
     }
     in.close();
+    return 1;
 }
 
 void write_file(string path) {
@@ -429,6 +642,10 @@ void write_file(string path) {
         out << p.poly_points.size() << endl;
         for (Polygon::Point point: p.poly_points) {
             out << point.x << " " << point.y << " " << point.z << endl;
+        }
+        out << p.poly_edges.size() << endl;
+        for (Polygon::Edge edge: p.poly_edges) {
+            out << (edge.start_p + 1) << " " << (edge.end_p + 1) << endl;
         }
         out << "" << endl;
     }
@@ -453,5 +670,78 @@ vector<string> split(const string& str, const string& delim) {
     }
 
     return res;
+}
+
+
+/**
+ * initialize bounding box
+ */
+void initialize_bounding() {
+    boundingBox.x_min = 0;
+    boundingBox.x_max = 1;
+    boundingBox.y_min = 0;
+    boundingBox.y_max = 1;
+    boundingBox.z_min = 0;
+    boundingBox.z_max = 1;
+}
+void set_bounding(Polygon polygon) {
+    for (Polygon::Point point: polygon.poly_points) {
+        if (point.x < boundingBox.x_min) {
+            boundingBox.x_min = point.x;
+        }
+        if (point.x > boundingBox.x_max) {
+            boundingBox.x_max = point.x;
+        }
+        if (point.y < boundingBox.y_min) {
+            boundingBox.y_min = point.y;
+        }
+        if (point.y > boundingBox.y_max) {
+            boundingBox.y_max = point.y;
+        }
+        if (point.z < boundingBox.z_min) {
+            boundingBox.z_min = point.z;
+        }
+        if (point.z > boundingBox.z_max) {
+            boundingBox.z_max = point.z;
+        }
+    }
+}
+
+/**
+ * apply normalization according to bounding box
+ */
+void apply_bounding(Polygon & polygon) {
+    for (int i = 0; i < polygon.poly_points.size(); i++) {
+        Polygon::Point point = polygon.poly_points[i];
+        polygon.poly_points[i].x = (point.x - boundingBox.x_min) / (boundingBox.x_max - boundingBox.x_min);
+        polygon.poly_points[i].y = (point.y - boundingBox.y_min) / (boundingBox.y_max - boundingBox.y_min);
+        polygon.poly_points[i].z = (point.z - boundingBox.z_min) / (boundingBox.z_max - boundingBox.z_min);
+
+    }
+
+}
+
+/**
+ * according to bounding box
+ */
+void normalize() {
+    initialize_bounding();
+    if (poly_id == 0) {
+        for (int i = 0; i < polygons.size(); i++) {
+            set_bounding(polygons[i]);
+        }
+        for (int i = 0; i < polygons.size(); i++) {
+            apply_bounding(polygons[i]);
+        }
+    }
+    else {
+        set_bounding(polygons[poly_id - 1]);
+        apply_bounding(polygons[poly_id - 1]);
+    }
+
+    cout << "bounding box: [" << boundingBox.x_min << " ," << boundingBox.x_max << "] * ["
+         << boundingBox.y_min << " ," << boundingBox.y_max << "] * ["
+         << boundingBox.z_min << " ," << boundingBox.z_max << "]" << endl;
+
 }
 

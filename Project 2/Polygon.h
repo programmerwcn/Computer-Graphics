@@ -18,6 +18,7 @@
 #include <vector>
 #include <list>
 #include <string>
+#include <string.h>
 #include <vector>
 using namespace std;
 
@@ -43,6 +44,7 @@ public:
     vector<Point> poly_points;
     vector<Edge> poly_edges;
 
+    Point rotate_vector;
     Polygon();
 
     void set_mat_rot(int i);
@@ -54,6 +56,11 @@ public:
 
     void translate3D(GLfloat tx, GLfloat ty, GLfloat tz);
     void rotate3D(Point p1, Point p2, GLfloat angle);
+    void clear_rotate_vector();
+    void get_centroid();
+    void scale3D(GLfloat sx, GLfloat sy, GLfloat sz);
+
+    void draw_polygon(string plane, int grid_width, int grid_height);
 
 
 };
