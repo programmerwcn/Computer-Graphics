@@ -139,21 +139,6 @@ Polygon.s:
 .PHONY : Polygon.s
 
 # target to build an object file
-ViewGL.o:
-	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/ViewGL.o
-.PHONY : ViewGL.o
-
-# target to preprocess a source file
-ViewGL.i:
-	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/ViewGL.i
-.PHONY : ViewGL.i
-
-# target to generate assembly for a file
-ViewGL.s:
-	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/ViewGL.s
-.PHONY : ViewGL.s
-
-# target to build an object file
 main.o:
 	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/main.o
 .PHONY : main.o
@@ -180,9 +165,6 @@ help:
 	@echo "... Polygon.o"
 	@echo "... Polygon.i"
 	@echo "... Polygon.s"
-	@echo "... ViewGL.o"
-	@echo "... ViewGL.i"
-	@echo "... ViewGL.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project 2/Polygon.cpp" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project 2/cmake-build-debug/CMakeFiles/Project2.dir/Polygon.o"
-  "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project 2/ViewGL.cpp" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project 2/cmake-build-debug/CMakeFiles/Project2.dir/ViewGL.o"
   "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project 2/main.cpp" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project 2/cmake-build-debug/CMakeFiles/Project2.dir/main.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

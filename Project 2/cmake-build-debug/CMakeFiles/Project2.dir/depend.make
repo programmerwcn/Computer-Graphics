@@ -4,9 +4,6 @@
 CMakeFiles/Project2.dir/Polygon.o: ../Polygon.cpp
 CMakeFiles/Project2.dir/Polygon.o: ../Polygon.h
 
-CMakeFiles/Project2.dir/ViewGL.o: ../ViewGL.cpp
-CMakeFiles/Project2.dir/ViewGL.o: ../ViewGL.h
-
 CMakeFiles/Project2.dir/main.o: ../Polygon.h
 CMakeFiles/Project2.dir/main.o: ../main.cpp
 
