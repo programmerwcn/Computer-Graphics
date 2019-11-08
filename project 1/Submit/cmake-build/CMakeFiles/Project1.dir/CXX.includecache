@@ -1,0 +1,216 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Clipping.cpp
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+Clipping.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Clipping.h
+math.h
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Clipping.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ClippingPolygon.cpp
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+ClippingPolygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ClippingPolygon.h
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+math.h
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ClippingPolygon.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ControllerGL.cpp
+ControllerGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ControllerGL.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ControllerGL.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ModelGL.cpp
+ModelGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ModelGL.h
+math.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/math.h
+string
+-
+iostream
+-
+fstream
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ModelGL.h
+vector
+-
+string
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.cpp
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+iostream
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+math.h
+-
+vector
+-
+list
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+vector
+-
+list
+-
+string
+-
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Transform.cpp
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+Transform.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Transform.h
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+math.h
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Transform.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Util.cpp
+Util.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Util.h
+vector
+-
+string
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Util.h
+vector
+-
+string
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ViewGL.cpp
+ViewGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ViewGL.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ViewGL.h
+ModelGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ModelGL.h
+string
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/string
+ClippingPolygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ClippingPolygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/main.cpp
+windows.h
+-
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+vector
+-
+fstream
+-
+iostream
+-
+string
+-
+ModelGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ModelGL.h
+Util.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Util.h
+ViewGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ViewGL.h
+Clipping.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/Clipping.h
+ClippingPolygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Submit/ClippingPolygon.h
+ctype.h
+-
+

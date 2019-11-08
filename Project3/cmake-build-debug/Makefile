@@ -123,32 +123,65 @@ Project3/fast:
 	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/build
 .PHONY : Project3/fast
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
+Polygon.o:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Polygon.o
+.PHONY : Polygon.o
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
+Polygon.i:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Polygon.i
+.PHONY : Polygon.i
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/main.cpp.s
-.PHONY : main.cpp.s
+Polygon.s:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Polygon.s
+.PHONY : Polygon.s
+
+# target to build an object file
+Polygon2D.o:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Polygon2D.o
+.PHONY : Polygon2D.o
+
+# target to preprocess a source file
+Polygon2D.i:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Polygon2D.i
+.PHONY : Polygon2D.i
+
+# target to generate assembly for a file
+Polygon2D.s:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Polygon2D.s
+.PHONY : Polygon2D.s
+
+# target to build an object file
+View.o:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/View.o
+.PHONY : View.o
+
+# target to preprocess a source file
+View.i:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/View.i
+.PHONY : View.i
+
+# target to generate assembly for a file
+View.s:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/View.s
+.PHONY : View.s
+
+# target to build an object file
+main.o:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/main.o
+.PHONY : main.o
+
+# target to preprocess a source file
+main.i:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/main.i
+.PHONY : main.i
+
+# target to generate assembly for a file
+main.s:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/main.s
+.PHONY : main.s
 
 # Help Target
 help:
@@ -159,6 +192,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Project3"
+	@echo "... Polygon.o"
+	@echo "... Polygon.i"
+	@echo "... Polygon.s"
+	@echo "... Polygon2D.o"
+	@echo "... Polygon2D.i"
+	@echo "... Polygon2D.s"
+	@echo "... View.o"
+	@echo "... View.i"
+	@echo "... View.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

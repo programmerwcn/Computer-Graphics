@@ -57,30 +57,75 @@ include CMakeFiles/Project3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Project3.dir/flags.make
 
-CMakeFiles/Project3.dir/main.cpp.o: CMakeFiles/Project3.dir/flags.make
-CMakeFiles/Project3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project3.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/main.cpp.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp"
+CMakeFiles/Project3.dir/main.o: CMakeFiles/Project3.dir/flags.make
+CMakeFiles/Project3.dir/main.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project3.dir/main.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/main.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp"
 
-CMakeFiles/Project3.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp" > CMakeFiles/Project3.dir/main.cpp.i
+CMakeFiles/Project3.dir/main.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/main.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp" > CMakeFiles/Project3.dir/main.i
 
-CMakeFiles/Project3.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp" -o CMakeFiles/Project3.dir/main.cpp.s
+CMakeFiles/Project3.dir/main.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/main.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp" -o CMakeFiles/Project3.dir/main.s
+
+CMakeFiles/Project3.dir/Polygon.o: CMakeFiles/Project3.dir/flags.make
+CMakeFiles/Project3.dir/Polygon.o: ../Polygon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project3.dir/Polygon.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Polygon.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.cpp"
+
+CMakeFiles/Project3.dir/Polygon.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Polygon.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.cpp" > CMakeFiles/Project3.dir/Polygon.i
+
+CMakeFiles/Project3.dir/Polygon.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Polygon.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.cpp" -o CMakeFiles/Project3.dir/Polygon.s
+
+CMakeFiles/Project3.dir/View.o: CMakeFiles/Project3.dir/flags.make
+CMakeFiles/Project3.dir/View.o: ../View.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project3.dir/View.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/View.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/View.cpp"
+
+CMakeFiles/Project3.dir/View.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/View.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/View.cpp" > CMakeFiles/Project3.dir/View.i
+
+CMakeFiles/Project3.dir/View.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/View.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/View.cpp" -o CMakeFiles/Project3.dir/View.s
+
+CMakeFiles/Project3.dir/Polygon2D.o: CMakeFiles/Project3.dir/flags.make
+CMakeFiles/Project3.dir/Polygon2D.o: ../Polygon2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project3.dir/Polygon2D.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Polygon2D.o -c "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.cpp"
+
+CMakeFiles/Project3.dir/Polygon2D.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Polygon2D.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.cpp" > CMakeFiles/Project3.dir/Polygon2D.i
+
+CMakeFiles/Project3.dir/Polygon2D.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Polygon2D.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.cpp" -o CMakeFiles/Project3.dir/Polygon2D.s
 
 # Object files for target Project3
 Project3_OBJECTS = \
-"CMakeFiles/Project3.dir/main.cpp.o"
+"CMakeFiles/Project3.dir/main.o" \
+"CMakeFiles/Project3.dir/Polygon.o" \
+"CMakeFiles/Project3.dir/View.o" \
+"CMakeFiles/Project3.dir/Polygon2D.o"
 
 # External object files for target Project3
 Project3_EXTERNAL_OBJECTS =
 
-Project3: CMakeFiles/Project3.dir/main.cpp.o
+Project3: CMakeFiles/Project3.dir/main.o
+Project3: CMakeFiles/Project3.dir/Polygon.o
+Project3: CMakeFiles/Project3.dir/View.o
+Project3: CMakeFiles/Project3.dir/Polygon2D.o
 Project3: CMakeFiles/Project3.dir/build.make
 Project3: CMakeFiles/Project3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Project3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Project3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
