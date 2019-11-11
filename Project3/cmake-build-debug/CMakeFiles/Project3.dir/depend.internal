@@ -4,6 +4,7 @@
 CMakeFiles/Project3.dir/Polygon.o
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.cpp
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.h
+ /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.h
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/common.hpp
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/_fixes.hpp
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/_swizzle.hpp
@@ -288,6 +289,8 @@ CMakeFiles/Project3.dir/View.o
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vec4.hpp
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vector_relational.hpp
 CMakeFiles/Project3.dir/main.o
+ /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.h
+ /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.h
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/common.hpp
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/_fixes.hpp
  /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/_swizzle.hpp

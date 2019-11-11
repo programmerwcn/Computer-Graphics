@@ -3,6 +3,7 @@
 
 CMakeFiles/Project3.dir/Polygon.o: ../Polygon.cpp
 CMakeFiles/Project3.dir/Polygon.o: ../Polygon.h
+CMakeFiles/Project3.dir/Polygon.o: ../Polygon2D.h
 CMakeFiles/Project3.dir/Polygon.o: ../glm/common.hpp
 CMakeFiles/Project3.dir/Polygon.o: ../glm/detail/_fixes.hpp
 CMakeFiles/Project3.dir/Polygon.o: ../glm/detail/_swizzle.hpp
@@ -287,6 +288,8 @@ CMakeFiles/Project3.dir/View.o: ../glm/vec3.hpp
 CMakeFiles/Project3.dir/View.o: ../glm/vec4.hpp
 CMakeFiles/Project3.dir/View.o: ../glm/vector_relational.hpp
 
+CMakeFiles/Project3.dir/main.o: ../Polygon.h
+CMakeFiles/Project3.dir/main.o: ../Polygon2D.h
 CMakeFiles/Project3.dir/main.o: ../glm/common.hpp
 CMakeFiles/Project3.dir/main.o: ../glm/detail/_fixes.hpp
 CMakeFiles/Project3.dir/main.o: ../glm/detail/_swizzle.hpp

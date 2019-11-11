@@ -22,7 +22,7 @@ class Polygon2D {
 public:
     int id;
     int half_tone;
-    int grid_width, grid_height, mega_size;
+    float pixel_size, mega_size;
     vector<vector<int>> pixels;
     int point_num;
     int minY, maxY;
@@ -31,6 +31,7 @@ public:
         float y;
         glm::vec3 I_P;
         int on;
+        int color;
     };
     struct Edge{
         double yMax;
@@ -65,6 +66,7 @@ public:
     void fillScanLine(int index);
     void getMinMaxY();
     void draw_pixel(Point p);
+    void draw_mega_pixel(int pos, int color, int origin_x, int origin_y, float mega_pixel_size);
     void fillPolygon();
     vector<Edge> edgeSort(vector<Edge> unsorted_edge);
 

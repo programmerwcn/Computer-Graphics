@@ -53,6 +53,7 @@ void Polygon2D::buildPoly() {
         current_edge.down = current_poly_edge.down;
         current_edge.x = current_poly_edge.down.x;
         current_edge.k = (current_poly_edge.up.x - current_poly_edge.down.x) / (current_poly_edge.up.y - current_poly_edge.down.y);
+        current_edge.I_P = current_edge.down.I_P;
         current_poly_edge.edge = current_edge;
         poly_edges.push_back(current_poly_edge);
     }
@@ -170,28 +171,34 @@ void Polygon2D::fillScanLine(int index) {
     }
 }
 
+
+
 void Polygon2D::draw_pixel(Point p) {
     mega_size = 3;
     GLfloat red = p.I_P.x / 255;
     GLfloat green = p.I_P.y / 255;
     GLfloat blue = p.I_P.z / 255;
+    GLfloat pixel_x = p.x * mega_size, pixel_y = p.y * mega_size;
 
     if (!half_tone) {
-        glBegin(GL_POINTS);
-        glColor3f(red, green, blue);
-        glVertex2f(p.x * grid_width, p.y * grid_height);
-        glEnd();
+        for (int i = 0; i < mega_size; i ++) {
+            for (int j = 0; j < mega_size; j++) {
+                glBegin(GL_POINTS);
+                glColor3f(red, green, blue);
+                glVertex2f(pixel_x + i, pixel_y + j);
+                glEnd();
+            }
+        }
+
     }
-    // half_toning on
+        // half_toning on
     else {
         vector<Point> mega_points;
-        GLfloat origin_x = p.x * grid_width / mega_size - ((mega_size - 1) / 2);
-        GLfloat origin_y = p.y * grid_height / mega_size - ((mega_size - 1) / 2);
         for(int i = 0; i < mega_size; i++) {
             for (int j = 0; j < mega_size; j++) {
                 Point mega_point;
-                mega_point.x = origin_x + i;
-                mega_point.y = origin_y + j;
+                mega_point.x = pixel_x + i;
+                mega_point.y = pixel_y + j;
                 mega_point.on = 0;
                 mega_points.push_back(mega_point);
             }
@@ -204,52 +211,135 @@ void Polygon2D::draw_pixel(Point p) {
             max = blue;
         }
         int on = mega_size * mega_size * max;
-        int num_red = round(on * red / (red + green + blue));
-        int num_green = round(on * green / (red + green + blue));
-        int num_blue = round(on * blue / (red + green + blue));
-        // draw all red points
-        for (int i = 0; i < num_red; i++) {
-            while (1) {
-                int position = rand() % 9;
-            if (!mega_points[position].on) {
-                glBegin(GL_POINTS);
-                glColor3f(1,0,0);
-                glVertex2f(mega_points[position].x, mega_points[position].y);
-                glEnd();
-                mega_points[position].on = 1;
-                break;
-            }
-            }
+        for (int i = 1; i <= on; i++) {
+            // randomly half-tone
+//            while (1) {
+//                int position = rand() % 9;
+//                if (!mega_points[position].on) {
+//                    glBegin(GL_POINTS);
+//                    glColor3f(1, 1, 1);
+//                    glVertex2f(mega_points[position].x, mega_points[position].y);
+//                    glEnd();
+//                    mega_points[position].on = 1;
+//                    break;
+//                }
+//            }
+draw_mega_pixel(i, 0, pixel_x, pixel_y, 1);
         }
-        // draw all green points
-        for (int i = 0; i < num_green; i++) {
-            while (1) {
-                int position = rand() % 9;
-                if (!mega_points[position].on) {
-                    glBegin(GL_POINTS);
-                    glColor3f(0,1,0);
-                    glVertex2f(mega_points[position].x, mega_points[position].y);
-                    glEnd();
-                    mega_points[position].on = 1;
-                    break;
-                }
-            }
-        }
-        // draw all blue points
-        for (int i = 0; i < num_blue; i++) {
-            while (1) {
-                int position = rand() % 9;
-                if (!mega_points[position].on) {
-                    glBegin(GL_POINTS);
-                    glColor3f(0,0,1);
-                    glVertex2f(mega_points[position].x, mega_points[position].y);
-                    glEnd();
-                    mega_points[position].on = 1;
-                    break;
-                }
-            }
-        }
+//        int num_red = round(on * red / (red + green + blue));
+//        int num_green = round(on * green / (red + green + blue));
+//        int num_blue = round(on * blue / (red + green + blue));
+//        // draw all red points
+//        for (int i = 0; i < num_red; i++) {
+//            while (1) {
+//                int position = rand() % 9;
+//                if (!mega_points[position].on) {
+//                    glBegin(GL_POINTS);
+//                    glColor3f(1,0,0);
+//                    glVertex2f(mega_points[position].x, mega_points[position].y);
+//                    glEnd();
+//                    mega_points[position].on = 1;
+//                    break;
+//                }
+//            }
+//        }
+//        // draw all green points
+//        for (int i = 0; i < num_green; i++) {
+//            while (1) {
+//                int position = rand() % 9;
+//                if (!mega_points[position].on) {
+//                    glBegin(GL_POINTS);
+//                    glColor3f(0,1,0);
+//                    glVertex2f(mega_points[position].x, mega_points[position].y);
+//                    glEnd();
+//                    mega_points[position].on = 1;
+//                    break;
+//                }
+//            }
+//        }
+//        // draw all blue points
+//        for (int i = 0; i < num_blue; i++) {
+//            while (1) {
+//                int position = rand() % 9;
+//                if (!mega_points[position].on) {
+//                    glBegin(GL_POINTS);
+//                    glColor3f(0,0,1);
+//                    glVertex2f(mega_points[position].x, mega_points[position].y);
+//                    glEnd();
+//                    mega_points[position].on = 1;
+//                    break;
+//                }
+//            }
+//        }
     }
+}
+
+void Polygon2D::draw_mega_pixel(int pos, int color, int origin_x, int origin_y, float mega_pixel_size) {
+    GLfloat x,y;
+    switch (pos) {
+        case 0:
+            return;
+        case 1:
+        x = origin_x + mega_pixel_size;
+        y = origin_y + mega_pixel_size;
+            break;
+        case 2:
+            x = origin_x + mega_pixel_size * 2;
+            y = origin_y + mega_pixel_size;
+            break;
+        case 3:
+            x = origin_x + mega_pixel_size;
+            y = origin_y + mega_pixel_size * 2;
+            break;
+        case 4:
+            x = origin_x ;
+            y = origin_y ;
+            break;
+        case 5:
+            x = origin_x ;
+            y = origin_y + mega_pixel_size;
+            break;
+        case 6:
+            x = origin_x + mega_pixel_size * 2;
+            y = origin_y ;
+            break;
+        case 7:
+            x = origin_x + mega_pixel_size * 2;
+            y = origin_y + mega_pixel_size * 2;
+            break;
+        case 8:
+            x = origin_x ;
+            y = origin_y + mega_pixel_size * 2;
+            break;
+        case 9:
+            x = origin_x + mega_pixel_size;
+            y = origin_y ;
+            break;
+    }
+    glBegin(GL_POINTS);
+    glColor3f(1,1,1);
+    glVertex2f(x, y);
+    glEnd();
+//    switch (color) {
+//        case 0:
+//            glBegin(GL_POINTS);
+//            glColor3f(1,0,0);
+//            glVertex2f(x, y);
+//            glEnd();
+//            break;
+//        case 1:
+//            glBegin(GL_POINTS);
+//            glColor3f(0,1,0);
+//            glVertex2f(x, y);
+//            glEnd();
+//            break;
+//        case 2:
+//            glBegin(GL_POINTS);
+//            glColor3f(0,0,1);
+//            glVertex2f(x, y);
+//            glEnd();
+//            break;
+//    }
 }
 
 void Polygon2D::fillPolygon() {
