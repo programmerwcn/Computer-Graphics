@@ -145,8 +145,13 @@ void Polygon2D::updateX(int index) {
         for (Edge edge: AEL[index]) {
             edge.x += edge.k;
             edge.y += 1;
-            edge.I_P = (float)((edge.y - edge.down.y) / (edge.up.y - edge.down.y) ) * edge.up.I_P +
-                    (float)((edge.up.y - edge.y) / (edge.up.y - edge.down.y) ) * edge.down.I_P;
+            if (edge.up.y == edge.down.y) {
+                edge.I_P = edge.down.I_P;
+            }
+            else {
+                edge.I_P = (float) ((edge.y - edge.down.y) / (edge.up.y - edge.down.y)) * edge.up.I_P +
+                           (float) ((edge.up.y - edge.y) / (edge.up.y - edge.down.y)) * edge.down.I_P;
+            }
             AEL[index + 1].push_back(edge);
         }
     }
@@ -164,8 +169,13 @@ void Polygon2D::fillScanLine(int index) {
             Point draw_p;
             draw_p.x = x0;
             draw_p.y = index + minY;
-            draw_p.I_P = (float) ((right.x - x0)/(right.x - left.x)) * left.I_P +
-                    (float) ((x0 - left.x)/(right.x - left.x)) * right.I_P;
+            if (right.x == left.x) {
+                draw_p.I_P = left.I_P;
+            }
+            else {
+                draw_p.I_P = (float) ((right.x - x0) / (right.x - left.x)) * left.I_P +
+                             (float) ((x0 - left.x) / (right.x - left.x)) * right.I_P;
+            }
             draw_pixel(draw_p);
         }
     }

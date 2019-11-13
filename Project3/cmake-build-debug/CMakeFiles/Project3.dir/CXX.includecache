@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.cpp
-Polygon2D.h
-/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.h
 OpenGL/gl.h
 -
 GLUT/glut.h
@@ -17,11 +15,9 @@ GL/gl.h
 -
 GL/glut.h
 -
-vector
--
 glm/glm.hpp
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/glm.hpp
-math.h
+vector
 -
 
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.h
@@ -634,6 +630,124 @@ vector_relational.hpp
 integer.hpp
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/integer.hpp
 
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/constants.hpp
+../detail/setup.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/setup.hpp
+constants.inl
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/constants.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/constants.inl
+limits
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion.hpp
+../mat3x3.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat3x3.hpp
+../mat4x4.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat4x4.hpp
+../vec3.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vec3.hpp
+../vec4.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vec4.hpp
+../gtc/constants.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/constants.hpp
+quaternion.inl
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion.inl
+../trigonometric.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/trigonometric.hpp
+../geometric.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/geometric.hpp
+../exponential.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/exponential.hpp
+limits
+-
+quaternion_simd.inl
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion_simd.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion_simd.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/type_precision.hpp
+../gtc/quaternion.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion.hpp
+../gtc/vec1.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/vec1.hpp
+../vec2.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vec2.hpp
+../vec3.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vec3.hpp
+../vec4.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vec4.hpp
+../mat2x2.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat2x2.hpp
+../mat2x3.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat2x3.hpp
+../mat2x4.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat2x4.hpp
+../mat3x2.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat3x2.hpp
+../mat3x3.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat3x3.hpp
+../mat3x4.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat3x4.hpp
+../mat4x2.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat4x2.hpp
+../mat4x3.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat4x3.hpp
+../mat4x4.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/mat4x4.hpp
+type_precision.inl
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/type_precision.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/type_precision.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/vec1.hpp
+../glm.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/glm.hpp
+../detail/type_vec1.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/type_vec1.hpp
+vec1.inl
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/vec1.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/vec1.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/dual_quaternion.hpp
+../glm.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/glm.hpp
+../gtc/constants.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/constants.hpp
+../gtc/quaternion.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion.hpp
+dual_quaternion.inl
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/dual_quaternion.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/dual_quaternion.inl
+../geometric.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/geometric.hpp
+limits
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/string_cast.hpp
+../glm.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/glm.hpp
+../gtc/type_precision.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/type_precision.hpp
+../gtc/quaternion.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtc/quaternion.hpp
+../gtx/dual_quaternion.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/dual_quaternion.hpp
+string
+-
+string_cast.inl
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/string_cast.inl
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/string_cast.inl
+cstdarg
+-
+cstdio
+-
+
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/integer.hpp
 detail/func_integer.hpp
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/func_integer.hpp
@@ -739,4 +853,42 @@ detail/type_vec4.hpp
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/vector_relational.hpp
 detail/func_vector_relational.hpp
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/detail/func_vector_relational.hpp
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp
+windows.h
+-
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+GL/gl.h
+-
+GL/glut.h
+-
+glm/glm.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/glm.hpp
+glm/gtx/string_cast.hpp
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/glm/gtx/string_cast.hpp
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+vector
+-
+fstream
+-
+iostream
+-
+string
+-
+string.h
+-
+ctype.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.h
+Polygon2D.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.h
 

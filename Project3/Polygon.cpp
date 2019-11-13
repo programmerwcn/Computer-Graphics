@@ -19,50 +19,69 @@
  * @param f view point
  * @param p
  */
-void Polygon::compute_IP_PHONG(glm::vec3 k_s, GLfloat K, glm::vec3 I_A, glm::vec3 I_L, glm::vec3 light_pos, glm::vec3 f, Point &p) {
+void Polygon::compute_IP_PHONG(glm::vec3 k_s, GLfloat K, glm::vec3 I_A, GLfloat I_L, glm::vec3 light_pos, glm::vec3 f, Point &p) {
     glm::vec3 I_p;
+    glm::vec3 k_d = glm::normalize(p.I_P);
+    glm::vec3 max_I_P = I_A + I_L / (glm::distance(f, p.position) + K)  * (k_d  + k_s);
+
 // vector l
     glm::vec3 l_vec = glm::normalize(light_pos - p.position);
 // vector n
 glm::vec3 n_vec = glm::normalize(p.normal_vector);
 // vector r
-glm::vec3 r_vec = 2 * glm::dot(l_vec, n_vec) * n_vec - l_vec;
+glm::vec3 r_vec = 2 * glm::dot(n_vec, l_vec) * n_vec - l_vec;
 // vector v
-glm::vec3 v_vec = glm::normalize(f - p.position);
-
-if (!(I_A.x == 0 && I_A.y == 0 && I_A.z == 0)) {
-I_A = glm::normalize(I_A);}
-if (I_L.length() != 0) {
-    I_L = glm::normalize(I_L);
+glm::vec3 v_vec = f - p.position;
+if (!(v_vec.x == 0 && v_vec.y == 0 && v_vec.z == 0)) {
+    v_vec = glm::normalize(v_vec);
 }
 
+
 // special cases
+// 0. view from back
+if (glm::dot(n_vec, v_vec) < 0) {
+    I_p = I_A;
+}
 // 1. light source & viewer on different sides
-if ((glm::dot(n_vec, l_vec) > 0 && glm::dot(n_vec, v_vec) < 0) || (glm::dot(n_vec, l_vec) < 0 && glm::dot(n_vec, v_vec) > 0)) {
+else if ((glm::dot(n_vec, l_vec) > 0 && glm::dot(n_vec, v_vec) < 0) || (glm::dot(n_vec, l_vec) < 0 && glm::dot(n_vec, v_vec) > 0)) {
     I_p = I_A;
 }
 // 2. view is outside the reflection zone
 else if (glm::dot(r_vec, v_vec) < 0) {
-    I_p = I_A + I_L / (glm::distance(f, p.position) + K)  * p.I_P * (float)(glm::dot(l_vec, n_vec));
+    I_p = I_A + I_L / (glm::distance(f, p.position) + K)  * k_d * (float)(glm::dot(l_vec, n_vec));
 }
 else {
-I_p = I_A + I_L / (glm::distance(f, p.position) + K)  * ( p.I_P * (float)(glm::dot(l_vec, n_vec))   + k_s * (float)glm::pow(glm::dot(r_vec, v_vec),p.specularity ));
+I_p = I_A + I_L / (glm::distance(f, p.position) + K)  * ( k_d * (float)(glm::dot(l_vec, n_vec))   + k_s * (float)glm::pow(glm::dot(r_vec, v_vec),p.specularity ));
 }
-if (!(I_p.x == 0 && I_p.y == 0 && I_p.z == 0)) {
-    I_p = glm::normalize(I_p);
+//p.I_P = I_p;
+
+//if (!(I_p.x == 0 && I_p.y == 0 && I_p.z == 0)) {
+//    I_p = glm::normalize(I_p);
+//}
+if (max_I_P.x > 1) {
+    I_p.x = I_p.x / max_I_P.x;
 }
-if (I_p.x < 0) {
-    I_p.x = 0;
+//if (I_p.x < 0) {
+//    I_p.x = 0;
+//}
+if (max_I_P.y > 1) {
+    I_p.y = I_p.y / max_I_P.y;
 }
-if(I_p.y < 0) {
-    I_p.y = 0;
+if (max_I_P.z > 1) {
+    I_p.z = I_p.z / max_I_P.z;
 }
-if (I_p.z < 0) {
-    I_p.z = 0;
-}
-p.I_P.x = I_p.x * p.I_P.x;
-    p.I_P.y = I_p.y * p.I_P.y;
-    p.I_P.z = I_p.z * p.I_P.z;
+//if (I_p.x < 0) {
+//    I_p.x = 0;
+//}
+//if(I_p.y < 0) {
+//    I_p.y = 0;
+//}
+//if (I_p.z < 0) {
+//    I_p.z = 0;
+//}
+p.I_P.x = I_p.x * 255;
+    p.I_P.y = I_p.y * 255;
+    p.I_P.z = I_p.z * 255;
 }
 
 void Polygon::compute_facet_normal_vector() {
@@ -95,6 +114,9 @@ void Polygon::compute_point_normal_vector() {
         normal_vector.x = normal_vector.x / (int)normal_vectors.size();
         normal_vector.y = normal_vector.y / (int)normal_vectors.size();
         normal_vector.z = normal_vector.z / (int)normal_vectors.size();
+        if (!(normal_vector.x == 0 && normal_vector.y == 0 && normal_vector.z == 0)) {
+            normal_vector = glm::normalize(normal_vector);
+        }
         points[i].normal_vector = normal_vector;
     }
 }
@@ -228,9 +250,16 @@ void Polygon::back_face_culling(vector<Facet> &facets, int direction) {
 /**
  * projects facets to xy, xz, yz plane
  */
-void Polygon::gouraud_shading(int direction) {
+void Polygon::gouraud_shading(int direction, int phong, glm::vec3 f) {
     // remove hidden surface
     vector<Facet> visible_facets = sort_facet(direction);
+
+    for (int i = 0; i < visible_facets.size(); i++) {
+        if (phong && glm::dot(visible_facets[i].normal_vector, f) < 0) {
+            visible_facets.erase(visible_facets.begin() + i);
+            i--;
+        }
+    }
 
     for (Facet facet: visible_facets) {
         Polygon2D temp_poly;
@@ -263,13 +292,13 @@ glm::vec2 Polygon::projection(int direction, glm::vec3 point_3d) {
             break;
             // project to xz plane, up --> down
         case 1:
-            point_2d.x = point_3d.x * grid_width/mega_size ;
-            point_2d.y = point_3d.z * grid_height/mega_size;
+            point_2d.x = point_3d.x * grid_width /mega_size;
+            point_2d.y = point_3d.z * grid_height /mega_size;
             break;
             // project to yz plane, right --> left
         case 2:
-            point_2d.x = point_3d.y * grid_width/mega_size;
-            point_2d.y = point_3d.z * grid_height/mega_size;
+            point_2d.x = point_3d.y * grid_width /mega_size;
+            point_2d.y = point_3d.z * grid_height / mega_size;
             break;
     }
     return point_2d;

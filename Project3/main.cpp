@@ -45,7 +45,8 @@ int win_height;
 int win_width;
 int trans;
 
-int half_tone;
+int half_tone, phong;
+glm::vec3 I_A, f, x;
 
 vector<Polygon> polygons;
 // file name
@@ -76,11 +77,13 @@ void normalize();
 
 int main(int argc, char **argv)
 {
-    file_name = dictionray + "cube_and_icosahedron.txt";
+    file_name = dictionray + "bunny.txt";
     read_file(file_name);
 
     // half_tone
-    half_tone = 1;
+    //half_tone = 1;
+    // phong
+    phong = 1;
     //the number of pixels in the grid
     grid_width = 500;
     grid_height = 500;
@@ -90,7 +93,7 @@ int main(int argc, char **argv)
     //the size of pixels sets the inital window height and width
     //don't make the pixels too large or the screen size will be larger than
     //your display size
-    pixel_size = 1;
+    pixel_size = 2;
     for (int i = 0; i < polygons.size(); i++) {
         polygons[i].grid_height = grid_height;
         polygons[i].grid_width = grid_width;
@@ -106,20 +109,24 @@ int main(int argc, char **argv)
 
 
     // phong
-    GLfloat  K = 20;
-    glm::vec3 I_A(0, 0, 0);
-    glm::vec3 I_L(1, 1, 1);
-    glm::vec3 k_s(255, 255, 255);
-    glm::vec3 f(0, 0, 1), x(1, 1, 1);
-    for (int i = 0; i < polygons.size(); i++) {
-        for (int j = 0; j < polygons[i].points.size(); j++) {
-            polygons[i].compute_IP_PHONG(k_s, K, I_A, I_L, x, f, polygons[i].points[j]);
+    if (phong) {
+        GLfloat K = 2;
+        I_A = glm::vec3(0.1, 0.1, 0.1);
+        GLfloat I_L = 1;
+        glm::vec3 k_s(0.75,0.75,0.75);
+        f = glm::vec3(0, 0, 1);
+        x = glm::vec3(0,0,1);
+        for (int i = 0; i < polygons.size(); i++) {
+            for (int j = 0; j < polygons[i].points.size(); j++) {
+                   polygons[i].compute_IP_PHONG(k_s, K, I_A, I_L, x, f, polygons[i].points[j]);
+            }
         }
     }
-    for (Polygon::Facet facet: polygons[1].facets) {
+    for (Polygon::Facet facet: polygons[0].facets) {
         cout << "normal vectors: " << glm::to_string(facet.normal_vector) << endl;
     }
-    for (Polygon::Point point: polygons[1].points) {
+    for (Polygon::Point point: polygons[0].points) {
+        cout << "normal vecs of points: " << glm::to_string(point.normal_vector) << endl;
         cout << "colors: " << glm::to_string(point.I_P) << endl;
     }
 
@@ -181,16 +188,21 @@ void display() {
 //    glLoadIdentity();
 
 //background
+//if (phong) {
     glViewport(0, 0, win_width, win_height);
-
-for (int i = 0; i < grid_width; i++) {
-    for (int j = 0; j < grid_height; j++) {
-        glBegin(GL_POINTS);
-        glColor3f(0, 0, 0);
-        glVertex2f(i, j);
-        glEnd();
-    }
+    glm::vec3 background;
+if (!(I_A.x == 0 && I_A .y == 0 && I_A.z == 0)) {
+    background = glm::normalize(I_A);
 }
+    for (int i = 0; i < grid_width; i++) {
+        for (int j = 0; j < grid_height; j++) {
+            glBegin(GL_POINTS);
+            glColor3f(background.x, background.y, background.z);
+            glVertex2f(i, j);
+            glEnd();
+        }
+    }
+//}
 
     //画分割线，分成四个视区
     glViewport(0, 0, win_width, win_height);
@@ -213,16 +225,16 @@ for (int i = 0; i < grid_width; i++) {
     glViewport(p_origion.x, p_origion.y, win_width / 2, win_width / 2);
 //    // test half_toning
 //    Polygon2D polygon2D;
-//    polygon2D.half_tone = 1;
+//    polygon2D.half_tone = 0;
 //    Polygon2D::Point point1, point2, point3;
-//    point1.x = 0;
+//    point1.x = 2;
 //    point1.y = 0;
 //    point1.I_P = glm::vec3(255, 0, 0);
-//    point2.x = 100;
-//    point2.y = 0;
+//    point2.x = 0;
+//    point2.y = 3;
 //    point2.I_P = glm::vec3(0, 255,0);
-//    point3.x = 0;
-//    point3.y = 100;
+//    point3.x = 4;
+//    point3.y = 3;
 //    point3.I_P = glm::vec3(0,0,255);
 //    polygon2D.poly_points.push_back(point1);
 //    polygon2D.poly_points.push_back(point2);
@@ -230,8 +242,10 @@ for (int i = 0; i < grid_width; i++) {
 ////
 //    polygon2D.fillPolygon();
  //   polygon2D.draw_pixel(point1);
+ for (Polygon polygon: polygons) {
+     polygon.gouraud_shading(0, phong, f);
+ }
 
-    polygons[1].gouraud_shading(0);
 
 
 
@@ -242,7 +256,9 @@ for (int i = 0; i < grid_width; i++) {
     p_origion.y = win_height / 2;
     glColor3f(0,0,1);
     glViewport(p_origion.x, p_origion.y, win_width/2, win_width/2);
-    polygons[1].gouraud_shading(1);
+    for (Polygon polygon: polygons) {
+        polygon.gouraud_shading(1, phong, f);
+    }
 
 
     //定义在左下角的区域 yz plane
@@ -251,7 +267,9 @@ for (int i = 0; i < grid_width; i++) {
     p_origion.z = 0;
     glColor3f(0,0,1);
     glViewport(p_origion.x, p_origion.y, win_width/2, win_width/2);
-    polygons[1].gouraud_shading(2);
+    for (Polygon polygon: polygons) {
+        polygon.gouraud_shading(2, phong, f);
+    }
 
     //blits the current opengl framebuffer on the screen
     glutSwapBuffers();

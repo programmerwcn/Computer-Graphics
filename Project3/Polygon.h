@@ -48,12 +48,12 @@ public:
     void compute_facet_normal_vector();
     void compute_point_normal_vector();
     void compute_Phong_n();
-    void compute_IP_PHONG(glm::vec3 k_s, GLfloat K, glm::vec3 I_A, glm::vec3 I_L, glm::vec3 light_pos, glm::vec3 f, Point &p);
+    void compute_IP_PHONG(glm::vec3 k_s, GLfloat K, glm::vec3 I_A, GLfloat I_L, glm::vec3 light_pos, glm::vec3 f, Point &p);
     vector<Facet> sort_facet(int direction);
     void compute_depth(vector<Facet> &facets,int direction);
     void sort_facet_by_depth(vector<Facet> &facets);
     void back_face_culling(vector<Facet> &facets, int direction);
-    void gouraud_shading(int direction);
+    void gouraud_shading(int direction, int phong, glm::vec3 f);
     void draw_pixel(int half_tone, int x, int y);
 
 };
