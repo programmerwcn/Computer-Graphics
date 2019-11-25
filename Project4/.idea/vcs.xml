@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui-test/nanogui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui-test/nanogui/ext/eigen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui-test/nanogui/ext/glfw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui-test/nanogui/ext/nanovg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui-test/nanogui/ext/pybind11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui-test/nanogui/ext/pybind11/tools/clang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui/ext/eigen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui/ext/glfw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui/ext/nanovg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui/ext/pybind11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui/ext/pybind11/tools/clang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui_original" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui_original/ext/eigen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui_original/ext/glfw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui_original/ext/nanovg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui_original/ext/pybind11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nanogui_original/ext/pybind11/tools/clang" vcs="Git" />
+  </component>
+</project>

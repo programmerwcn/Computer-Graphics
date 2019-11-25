@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.cpp
+Clipping.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+math.h
+-
+
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Clipping.h
 OpenGL/gl.h
 -
@@ -13,6 +23,18 @@ GLUT/glut.h
 -
 Polygon.h
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.cpp
+ClippingPolygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
+math.h
+-
 
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ClippingPolygon.h
 OpenGL/gl.h
@@ -22,6 +44,24 @@ GLUT/glut.h
 Polygon.h
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
 
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.cpp
+ControllerGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ControllerGL.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.cpp
+ModelGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.h
+math.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/math.h
+string
+-
+iostream
+-
+fstream
+-
+
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ModelGL.h
 vector
 -
@@ -29,6 +69,22 @@ string
 -
 Polygon.h
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.cpp
+iostream
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
+math.h
+-
+vector
+-
+list
+-
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
 
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
 vector
@@ -42,11 +98,43 @@ OpenGL/gl.h
 GLUT/glut.h
 -
 
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.cpp
+Transform.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
+math.h
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Transform.h
+OpenGL/gl.h
+-
+GLUT/glut.h
+-
+Polygon.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Polygon.h
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.cpp
+Util.h
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.h
 vector
 -
 string
 -
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/Util.h
+vector
+-
+string
+-
+
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.cpp
+ViewGL.h
+/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.h
 
 /Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/project 1/ViewGL.h
 ModelGL.h

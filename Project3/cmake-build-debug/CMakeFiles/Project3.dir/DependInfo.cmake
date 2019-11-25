@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon.cpp" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles/Project3.dir/Polygon.o"
   "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/Polygon2D.cpp" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles/Project3.dir/Polygon2D.o"
-  "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/View.cpp" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles/Project3.dir/View.o"
   "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/main.cpp" "/Users/christine/Documents/Study/Grade 3/大三上/课程/Computer Graphics/Computer-Graphics/Project3/cmake-build-debug/CMakeFiles/Project3.dir/main.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

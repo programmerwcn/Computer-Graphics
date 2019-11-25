@@ -123,248 +123,140 @@ Project1/fast:
 	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/build
 .PHONY : Project1/fast
 
-Clipping.o: Clipping.cpp.o
-
+# target to build an object file
+Clipping.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Clipping.o
 .PHONY : Clipping.o
 
-# target to build an object file
-Clipping.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Clipping.cpp.o
-.PHONY : Clipping.cpp.o
-
-Clipping.i: Clipping.cpp.i
-
+# target to preprocess a source file
+Clipping.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Clipping.i
 .PHONY : Clipping.i
 
-# target to preprocess a source file
-Clipping.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Clipping.cpp.i
-.PHONY : Clipping.cpp.i
-
-Clipping.s: Clipping.cpp.s
-
+# target to generate assembly for a file
+Clipping.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Clipping.s
 .PHONY : Clipping.s
 
-# target to generate assembly for a file
-Clipping.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Clipping.cpp.s
-.PHONY : Clipping.cpp.s
-
-ClippingPolygon.o: ClippingPolygon.cpp.o
-
+# target to build an object file
+ClippingPolygon.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ClippingPolygon.o
 .PHONY : ClippingPolygon.o
 
-# target to build an object file
-ClippingPolygon.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ClippingPolygon.cpp.o
-.PHONY : ClippingPolygon.cpp.o
-
-ClippingPolygon.i: ClippingPolygon.cpp.i
-
+# target to preprocess a source file
+ClippingPolygon.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ClippingPolygon.i
 .PHONY : ClippingPolygon.i
 
-# target to preprocess a source file
-ClippingPolygon.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ClippingPolygon.cpp.i
-.PHONY : ClippingPolygon.cpp.i
-
-ClippingPolygon.s: ClippingPolygon.cpp.s
-
+# target to generate assembly for a file
+ClippingPolygon.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ClippingPolygon.s
 .PHONY : ClippingPolygon.s
 
-# target to generate assembly for a file
-ClippingPolygon.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ClippingPolygon.cpp.s
-.PHONY : ClippingPolygon.cpp.s
-
-ControllerGL.o: ControllerGL.cpp.o
-
+# target to build an object file
+ControllerGL.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ControllerGL.o
 .PHONY : ControllerGL.o
 
-# target to build an object file
-ControllerGL.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ControllerGL.cpp.o
-.PHONY : ControllerGL.cpp.o
-
-ControllerGL.i: ControllerGL.cpp.i
-
+# target to preprocess a source file
+ControllerGL.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ControllerGL.i
 .PHONY : ControllerGL.i
 
-# target to preprocess a source file
-ControllerGL.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ControllerGL.cpp.i
-.PHONY : ControllerGL.cpp.i
-
-ControllerGL.s: ControllerGL.cpp.s
-
+# target to generate assembly for a file
+ControllerGL.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ControllerGL.s
 .PHONY : ControllerGL.s
 
-# target to generate assembly for a file
-ControllerGL.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ControllerGL.cpp.s
-.PHONY : ControllerGL.cpp.s
-
-ModelGL.o: ModelGL.cpp.o
-
+# target to build an object file
+ModelGL.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ModelGL.o
 .PHONY : ModelGL.o
 
-# target to build an object file
-ModelGL.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ModelGL.cpp.o
-.PHONY : ModelGL.cpp.o
-
-ModelGL.i: ModelGL.cpp.i
-
+# target to preprocess a source file
+ModelGL.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ModelGL.i
 .PHONY : ModelGL.i
 
-# target to preprocess a source file
-ModelGL.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ModelGL.cpp.i
-.PHONY : ModelGL.cpp.i
-
-ModelGL.s: ModelGL.cpp.s
-
+# target to generate assembly for a file
+ModelGL.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ModelGL.s
 .PHONY : ModelGL.s
 
-# target to generate assembly for a file
-ModelGL.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ModelGL.cpp.s
-.PHONY : ModelGL.cpp.s
-
-Polygon.o: Polygon.cpp.o
-
+# target to build an object file
+Polygon.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Polygon.o
 .PHONY : Polygon.o
 
-# target to build an object file
-Polygon.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Polygon.cpp.o
-.PHONY : Polygon.cpp.o
-
-Polygon.i: Polygon.cpp.i
-
+# target to preprocess a source file
+Polygon.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Polygon.i
 .PHONY : Polygon.i
 
-# target to preprocess a source file
-Polygon.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Polygon.cpp.i
-.PHONY : Polygon.cpp.i
-
-Polygon.s: Polygon.cpp.s
-
+# target to generate assembly for a file
+Polygon.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Polygon.s
 .PHONY : Polygon.s
 
-# target to generate assembly for a file
-Polygon.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Polygon.cpp.s
-.PHONY : Polygon.cpp.s
-
-Transform.o: Transform.cpp.o
-
+# target to build an object file
+Transform.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Transform.o
 .PHONY : Transform.o
 
-# target to build an object file
-Transform.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Transform.cpp.o
-.PHONY : Transform.cpp.o
-
-Transform.i: Transform.cpp.i
-
+# target to preprocess a source file
+Transform.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Transform.i
 .PHONY : Transform.i
 
-# target to preprocess a source file
-Transform.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Transform.cpp.i
-.PHONY : Transform.cpp.i
-
-Transform.s: Transform.cpp.s
-
+# target to generate assembly for a file
+Transform.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Transform.s
 .PHONY : Transform.s
 
-# target to generate assembly for a file
-Transform.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Transform.cpp.s
-.PHONY : Transform.cpp.s
-
-Util.o: Util.cpp.o
-
+# target to build an object file
+Util.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Util.o
 .PHONY : Util.o
 
-# target to build an object file
-Util.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Util.cpp.o
-.PHONY : Util.cpp.o
-
-Util.i: Util.cpp.i
-
+# target to preprocess a source file
+Util.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Util.i
 .PHONY : Util.i
 
-# target to preprocess a source file
-Util.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Util.cpp.i
-.PHONY : Util.cpp.i
-
-Util.s: Util.cpp.s
-
+# target to generate assembly for a file
+Util.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Util.s
 .PHONY : Util.s
 
-# target to generate assembly for a file
-Util.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/Util.cpp.s
-.PHONY : Util.cpp.s
-
-ViewGL.o: ViewGL.cpp.o
-
+# target to build an object file
+ViewGL.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ViewGL.o
 .PHONY : ViewGL.o
 
-# target to build an object file
-ViewGL.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ViewGL.cpp.o
-.PHONY : ViewGL.cpp.o
-
-ViewGL.i: ViewGL.cpp.i
-
+# target to preprocess a source file
+ViewGL.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ViewGL.i
 .PHONY : ViewGL.i
 
-# target to preprocess a source file
-ViewGL.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ViewGL.cpp.i
-.PHONY : ViewGL.cpp.i
-
-ViewGL.s: ViewGL.cpp.s
-
+# target to generate assembly for a file
+ViewGL.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ViewGL.s
 .PHONY : ViewGL.s
 
-# target to generate assembly for a file
-ViewGL.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/ViewGL.cpp.s
-.PHONY : ViewGL.cpp.s
-
-main.o: main.cpp.o
-
+# target to build an object file
+main.o:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/main.o
 .PHONY : main.o
 
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
+# target to preprocess a source file
+main.i:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/main.i
 .PHONY : main.i
 
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.s:
+	$(MAKE) -f CMakeFiles/Project1.dir/build.make CMakeFiles/Project1.dir/main.s
+.PHONY : main.s
 
 # Help Target
 help:
